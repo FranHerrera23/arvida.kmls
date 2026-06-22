@@ -21,30 +21,41 @@ Nota: "son referencia, no protagonizan" — encajan en el rol que estas imágene
 cumplen: acompañan el texto. No hace falta rediseñar nada, solo cargar los archivos.
 
 ## 2. KAREN
-- assets/studio/karen.jpg  → retrato Founder & Creative Director (vertical, 3/4)
+- assets/studio/karen.jpg  → retrato Founder & Creative Director (vertical, 3/4). ⚠️ El archivo actual tiene nombre random → renombrar a `karen.jpg`.
 
-## 3. GALERÍAS DE PROYECTOS (lightbox) — fotos numeradas 1.jpg … N.jpg
+## 3. GALERÍAS DE PROYECTOS (lightbox)
 
-| Proyecto      | Carpeta              | Nº fotos | Extra |
-|---------------|----------------------|----------|-------|
-| Neymar        | assets/neymar/       | 6        |       |
-| Gusttavo Lima | assets/gustavo/      | 5        |       |
-| Superyacht    | assets/yacht/        | 4        |       |
-| Private Jet   | assets/jet/          | 4        |       |
-| Saadiyat      | assets/saadiyat/     | 5        | + video.mp4 (primer slide) |
-| Art Collector | assets/collector/    | 6        |       |
-| Palm Beach    | assets/palmbeach/    | 5        |       |
-| Pezet 3       | assets/pezet3/       | 6        |       |
-| La Moraleja   | assets/moraleja/     | 5        |       |
-| Private Apt   | assets/mariana/      | 4        |       |
-| Family Res    | assets/kathy/        | 4        |       |
-| Viva Gym      | assets/vivagym/      | 4        |       |
-| Blas Cerdeña  | assets/blascerdena/  | 5        |       |
-| Poseidón      | assets/poseidon/     | 5        |       |
-| Fisher Island | assets/fisher/       | 5        |       |
-| Golden Beach  | assets/golden/       | 6        |       |
+⚠️ **REGLA CLAVE:** dentro de cada carpeta, las fotos deben llamarse `1.jpg`, `2.jpg`, … `N.jpg` (la `1.jpg` es la portada). Hoy tienen nombres random (WhatsApp…, Proyecto Garcia…, etc.) → Claude Code las renombra. `N` debe coincidir con `photos:N` del objeto PROJECTS en el HTML.
 
-**Total fotos de proyecto: ~79**  ·  Para cambiar un conteo: editar `photos:N` en el objeto PROJECTS del HTML.
+| Proyecto         | Carpeta                | photos:N | Material hoy | Extra |
+|------------------|------------------------|----------|--------------|-------|
+| Neymar           | assets/neymar/         | 8        | 8            |       |
+| Gusttavo Lima    | assets/gustavo/        | 5        | vacía        |       |
+| Superyacht       | assets/yacht/          | 4        | vacía        |       |
+| Private Jet      | assets/jet/            | 4        | vacía        |       |
+| Saadiyat         | assets/saadiyat/       | 5        | vacía        | + video.mp4 (primer slide) |
+| Art Collector    | assets/collector/      | 6        | vacía        |       |
+| Four Seasons     | assets/fourseasons/    | 8        | 18 → elegir 8 |       |
+| Fisher Island    | assets/fisher/         | 5        | vacía        |       |
+| Key Biscayne     | assets/keybiscayne/    | 8        | 15 → elegir 8 |       |
+| Golden Beach     | assets/golden/         | 6        | vacía        |       |
+| Palm Beach       | assets/palmbeach/      | 5        | vacía        |       |
+| Private Villa    | assets/privatevilla/   | 6        | 6            |       |
+| Private Family   | assets/residence-1/    | 4        | vacía (era `kathy`) | renombrar carpeta |
+| Private Apt      | assets/residence-2/    | 4        | vacía (era `mariana`) | renombrar carpeta |
+| Poseidón         | assets/poseidon/       | 8        | 8            |       |
+| Pezet 1          | assets/pezet1/         | 8        | 8            |       |
+| Pezet 2          | assets/pezet2/         | 8        | 10 → elegir 8 |       |
+| Pezet 3          | assets/pezet3/         | 6        | 1 → faltan   | sumar fotos o bajar photos:6 |
+| Blas Cerdeña     | assets/blascerdena/    | 8        | 15 → elegir 8 |       |
+| Viva Gym         | assets/vivagym/        | 4        | vacía        |       |
+
+**Para cambiar un conteo:** editar `photos:N` en el objeto PROJECTS del HTML. Si falta una foto, el `onerror` la oculta (no rompe).
+
+### ⚠️ Renombrar 2 carpetas (nombres de cliente → genéricos)
+- `assets/kathy/`   → `assets/residence-1/`
+- `assets/mariana/` → `assets/residence-2/`
+(Ambas están vacías, así que es solo renombrar la carpeta.)
 
 ## 4. VIDEO
 - assets/saadiyat/video.mp4 → aparece como PRIMER slide de la galería de Saadiyat (con ícono play en el thumbnail)
