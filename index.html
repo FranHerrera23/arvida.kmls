@@ -55,6 +55,7 @@
   .rv{opacity:0;transform:translateY(26px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
   .rv.in{opacity:1;transform:none}
   .rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+  @media(min-width:769px){.pmax{top:-10% !important;height:120% !important;will-change:transform}}
 
   /* HERO */
   .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:130px var(--pad) clamp(40px,7vh,70px);position:relative;color:#fff;overflow:hidden}
@@ -62,7 +63,7 @@
   .hero .ph{z-index:-2}
   .hero::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(16,13,9,.55) 0%,rgba(16,13,9,.18) 40%,rgba(16,13,9,.82) 100%)}
   .hero .kicker{color:var(--bronce-light);margin-bottom:30px}
-  .hero h1{font-family:var(--display);font-weight:800;font-size:clamp(34px,5vw,82px);line-height:1.02;letter-spacing:-.03em;max-width:20ch}
+  .hero h1{font-family:var(--display);font-weight:800;font-size:clamp(32px,4.75vw,78px);line-height:1.02;letter-spacing:-.03em;max-width:20ch;text-wrap:balance}
   .hero h1 .it{color:var(--bronce-light)}
   .hero .sub{margin-top:30px;max-width:52ch;font-size:clamp(15px,1.4vw,18px);line-height:1.7;color:rgba(244,241,234,.86)}
   .hero-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-top:clamp(40px,8vh,80px)}
@@ -400,7 +401,7 @@
   @media(max-width:600px){
     :root{--pad:20px}
     .nav-in{padding:16px var(--pad)} .nav .logo{font-size:13px} .nav .logo small{letter-spacing:.26em;font-size:8px}
-    .hero{padding:118px var(--pad) 38px} .hero h1{font-size:clamp(29px,8.4vw,40px);max-width:18ch} .hero .sub{font-size:15px;max-width:42ch} .hero .meta,.hero .scroll{font-size:10px}
+    .hero{padding:118px var(--pad) 38px} .hero h1{font-size:clamp(27.5px,8vw,38px);max-width:18ch} .hero .sub{font-size:15px;max-width:42ch} .hero .meta,.hero .scroll{font-size:10px}
     h2.big{font-size:clamp(27px,8vw,38px)} .invite .l h2{font-size:clamp(25px,7.6vw,36px)}
     .philo h2,.reading h2{font-size:clamp(25px,7.2vw,36px)} .philo .body,.reading .body{font-size:15px}
     .studio .lead{font-size:clamp(20px,5.8vw,29px)} .stat{padding:24px 18px} .stat .n{font-size:clamp(28px,9.5vw,40px)}
@@ -437,7 +438,7 @@
 
 <!-- HERO -->
 <header class="hero" id="top">
-  <img src="assets/arvida/hero.jpg" alt="" onerror="this.remove()">
+  <img class="pmax" src="assets/arvida/hero.jpg" alt="" onerror="this.remove()">
   <div class="ph" data-label="Hero — 41 Arvida at dusk (warm, cinematic)"></div>
   <div class="kicker rv">Lighting Design Proposal · 41 Arvida · Confidential</div>
   <h1 class="rv d1">For a lifetime the light has been pointed at him.<br>Here, he decides where it <span class="it">falls.</span></h1>
@@ -483,7 +484,7 @@
 
 <!-- 03 READING ARVIDA 01 -->
 <section class="reading rev" id="material">
-  <div class="img"><img src="assets/arvida/material.jpg" alt="" onerror="this.remove()"><div class="ph" data-label="Material — plaster · iroko · microcement · felt"></div></div>
+  <div class="img"><img class="pmax" src="assets/arvida/material.jpg" alt="" onerror="this.remove()"><div class="ph" data-label="Material — plaster · iroko · microcement · felt"></div></div>
   <div class="txt rv">
     <div class="kicker">Reading Arvida — 01</div>
     <h2>Material first.</h2>
@@ -494,7 +495,7 @@
 
 <!-- 04 READING ARVIDA 02 -->
 <section class="reading" id="musician">
-  <div class="img"><img src="assets/arvida/mood.jpg" alt="" onerror="this.remove()"><div class="ph" data-label="Mood — booth · screening · studio"></div></div>
+  <div class="img"><img class="pmax" src="assets/arvida/mood.jpg" alt="" onerror="this.remove()"><div class="ph" data-label="Mood — booth · screening · studio"></div></div>
   <div class="txt rv">
     <div class="kicker">Reading Arvida — 02</div>
     <h2>The screening room is the heart, not an amenity.</h2>
@@ -571,7 +572,7 @@
     <article class="card rv" data-c="res" data-project="poseidon"><div class="imgw"><img src="assets/poseidon/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Poseidón beach house"></div><span class="num">09</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Beachfront</div><h3>Poseidón Beach House</h3><div class="loc">Lima</div></div></article>
     <article class="card rv" data-c="res" data-project="fisher"><div class="imgw"><img src="assets/fisher/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Fisher Island"></div><span class="num">10</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Adriana Hoyos</div><h3>Fisher Island Apartment</h3><div class="loc">Miami</div></div></article>
     <article class="card rv" data-c="res" data-project="golden"><div class="imgw"><img src="assets/golden/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Golden Beach residence"></div><span class="num">11</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Oppenheim Architecture</div><h3>A Private Residence</h3><div class="loc">Golden Beach</div></div></article>
-    <article class="card rv" data-c="res" data-project="fourseasons"><div class="imgw"><img src="assets/fourseasons/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Four Seasons"></div><span class="num">12</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Adriana Hoyos</div><h3>Four Seasons Residences</h3><div class="loc">Brickell · Miami</div></div></article>
+    <article class="card rv" data-c="res" data-project="fourseasons"><div class="imgw"><img src="assets/fourseasons/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Four Seasons"></div><span class="num">12</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Adriana Hoyos</div><h3>Four Seasons Penthouse</h3><div class="loc">Brickell · Miami</div></div></article>
     <article class="card rv" data-c="res" data-project="keybiscayne"><div class="imgw"><img src="assets/keybiscayne/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Key Biscayne"></div><span class="num">13</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Waterfront</div><h3>Key Biscayne Villa</h3><div class="loc">Key Biscayne · Miami</div></div></article>
     <article class="card rv" data-c="res" data-project="pezet1"><div class="imgw"><img src="assets/pezet1/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Pezet 1"></div><span class="num">14</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · RAMSA</div><h3>Pezet 1</h3><div class="loc">Lima</div></div></article>
     <article class="card rv" data-c="res" data-project="pezet2"><div class="imgw"><img src="assets/pezet2/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Pezet 2"></div><span class="num">15</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · RAMSA</div><h3>Pezet 2</h3><div class="loc">Lima</div></div></article>
@@ -607,9 +608,9 @@
     </ul>
   </div>
   <div class="shots">
-    <div class="s s1"><img src="assets/scope/stage1-1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="RCP / lighting plan"></div></div>
-    <div class="s s2"><img src="assets/scope/stage1-2.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Concept render"></div></div>
-    <div class="s s3"><img src="assets/scope/stage1-3.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Fixture schedule"></div></div>
+    <div class="s s1"><img class="pmax" src="assets/scope/stage1-1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="RCP / lighting plan"></div></div>
+    <div class="s s2"><img class="pmax" src="assets/scope/stage1-2.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Concept render"></div></div>
+    <div class="s s3"><img class="pmax" src="assets/scope/stage1-3.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Fixture schedule"></div></div>
   </div>
 </section>
 
@@ -629,9 +630,9 @@
     </ul>
   </div>
   <div class="shots">
-    <div class="s s1"><img src="assets/scope/stage2-1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Coordination markup"></div></div>
-    <div class="s s2"><img src="assets/scope/stage2-2.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Site meeting"></div></div>
-    <div class="s s3"><img src="assets/scope/stage2-3.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Drawing set"></div></div>
+    <div class="s s1"><img class="pmax" src="assets/scope/stage2-1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Coordination markup"></div></div>
+    <div class="s s2"><img class="pmax" src="assets/scope/stage2-2.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Site meeting"></div></div>
+    <div class="s s3"><img class="pmax" src="assets/scope/stage2-3.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Drawing set"></div></div>
   </div>
 </section>
 
@@ -650,9 +651,9 @@
     </ul>
   </div>
   <div class="shots">
-    <div class="s s1"><img src="assets/scope/stage3-1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Aiming fixtures"></div></div>
-    <div class="s s2"><img src="assets/scope/stage3-2.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Final scene"></div></div>
-    <div class="s s3"><img src="assets/scope/stage3-3.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Walkthrough"></div></div>
+    <div class="s s1"><img class="pmax" src="assets/scope/stage3-1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Aiming fixtures"></div></div>
+    <div class="s s2"><img class="pmax" src="assets/scope/stage3-2.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Final scene"></div></div>
+    <div class="s s3"><img class="pmax" src="assets/scope/stage3-3.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Walkthrough"></div></div>
   </div>
 </section>
 
@@ -759,7 +760,6 @@
     <div class="p"><div class="nm">2id Interiors</div><div class="ty">Miami</div></div>
     <div class="p"><div class="nm">Llosa Cortegana</div><div class="ty">Architects</div></div>
     <div class="p"><div class="nm">Studio Valle de Valle</div><div class="ty">Interiors · New York · 41 Arvida</div></div>
-    <div class="p"><div class="nm">Four Seasons</div><div class="ty">Residences</div></div>
   </div>
 </section>
 
@@ -875,6 +875,32 @@
   const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
   document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 
+  // ===== SUBTLE PARALLAX (large images only; off on mobile / reduced-motion) =====
+  (function(){
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if(matchMedia('(max-width: 768px)').matches) return;
+    const els=[...document.querySelectorAll('.pmax')];
+    if(!els.length) return;
+    let ticking=false;
+    const update=()=>{
+      const vh=window.innerHeight;
+      els.forEach(el=>{
+        const r=el.getBoundingClientRect();
+        if(r.bottom<-80||r.top>vh+80) return;
+        const delta=(r.top+r.height/2)-vh/2;
+        let shift=-delta*0.12;
+        const max=r.height*0.10;
+        if(shift>max)shift=max; else if(shift<-max)shift=-max;
+        el.style.transform='translateY('+shift.toFixed(1)+'px)';
+      });
+      ticking=false;
+    };
+    const onPx=()=>{ if(!ticking){ requestAnimationFrame(update); ticking=true; } };
+    window.addEventListener('scroll',onPx,{passive:true});
+    window.addEventListener('resize',onPx,{passive:true});
+    update();
+  })();
+
   // ===== PROJECT CASE STUDIES =====
   // Photos: assets/<slug>/1.jpg … 6.jpg (1.jpg = card cover). Edit copy in PROJECTS below.
   let curMax=4;
@@ -924,7 +950,7 @@
     fisher:{cat:'Residential · Adriana Hoyos',title:'Fisher Island Apartment',loc:'Miami',photos:5,
       challenge:'A private apartment in the most exclusive zip code in the United States.',
       solution:'Gallery-grade, restrained light that lets material and water views carry the space.'},
-    fourseasons:{cat:'Residential · Adriana Hoyos',title:'Four Seasons Residences',loc:'Brickell · Miami',photos:8,
+    fourseasons:{cat:'Residential · Adriana Hoyos',title:'Four Seasons Penthouse',loc:'Brickell · Miami',photos:8,
       challenge:'A $14M penthouse at Four Seasons Residences Brickell, designed by Adriana Hoyos — zero margin for a visible misstep.',
       solution:'Concealed, precise layers that frame both the interior design and the skyline, holding up by day and after dark.'},
     keybiscayne:{cat:'Residential · Waterfront',title:'Key Biscayne Villa',loc:'Key Biscayne · Miami',photos:8,
