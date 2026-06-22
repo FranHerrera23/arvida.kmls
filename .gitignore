@@ -1,0 +1,9 @@
+# El repo = SOLO el sitio. Ignoramos todo lo de la raíz (PDFs confidenciales, versiones viejas,
+# .docx, screenshots, borradores). Solo dejamos pasar index.html + assets/ + los .md de guía.
+/*
+!/.gitignore
+!/index.html
+!/assets/
+!/CLAUDE.md
+!/README.md
+!/ASSET-MANIFEST.md

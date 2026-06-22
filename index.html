@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karen Mannheim Lighting Studio — 41 Arvida · Lighting Design Proposal</title>
+<meta name="description" content="A confidential lighting design proposal for 41 Arvida, Coral Gables — in partnership with Studio Valle de Valle. Karen Mannheim Lighting Studio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cal:#F4F1EA; --cal-deep:#EAE4D8; --cal-warm:#EFE9DC;
+    --tinta:#1A1916; --tinta-soft:#4A463F; --tinta-mute:#756F64;
+    --bronce:#9A8463; --bronce-deep:#6F5E44; --bronce-light:#BBA888;
+    --line:#D6CFC1; --line-soft:#E2DBCD;
+    --display:'Archivo',system-ui,sans-serif;
+    --serif:'Fraunces',Georgia,serif;
+    --sans:'Archivo',system-ui,sans-serif;
+    --ease:cubic-bezier(.16,1,.3,1);
+    --pad:clamp(22px,5vw,84px);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--cal);color:var(--tinta);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  ::selection{background:var(--tinta);color:var(--cal)}
+  img{display:block;width:100%;height:100%;object-fit:cover}
+  a{color:inherit;text-decoration:none}
+  section{position:relative}
+
+  .progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--bronce);z-index:200;transition:width .1s linear}
+
+  .ph{position:absolute;inset:0;background:linear-gradient(155deg,#3a3025 0%,#211b14 55%,#100d09 100%)}
+  #cinema .ph{background:linear-gradient(135deg,#1c2024 0%,#141719 50%,#0a0c0e 100%)}
+  .ph::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 62% 34%,rgba(187,168,136,.28),transparent 58%)}
+  #cinema .ph::before{background:radial-gradient(circle at 30% 30%,rgba(140,150,165,.22),transparent 60%)}
+  #approach .ph::before{background:radial-gradient(circle at 70% 60%,rgba(187,168,136,.26),transparent 58%)}
+  .ph[data-label]::after{content:attr(data-label);position:absolute;bottom:18px;left:20px;font-family:var(--display);font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,241,234,.42)}
+
+  /* NAV */
+  .nav{position:fixed;top:0;left:0;width:100%;z-index:150;mix-blend-mode:difference;transition:opacity .4s}
+  .nav-in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:22px var(--pad);gap:20px}
+  .nav-left,.nav-right{display:flex;gap:28px;align-items:center}
+  .nav-right{justify-content:flex-end}
+  .nav .logo{font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:.04em;color:#fff;text-align:center;white-space:nowrap}
+  .nav .logo small{display:block;font-size:8.5px;font-weight:600;letter-spacing:.32em;opacity:.7;margin-top:3px}
+  .nav .ctx{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:#fff;opacity:.82}
+  .nav-right .ctx{text-align:right;display:block;width:100%}
+  @media(max-width:920px){.nav-left,.nav-right{display:none}.nav-in{grid-template-columns:1fr;justify-items:center}}
+
+  .sx{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--bronce-deep)}
+  .kicker{font-family:var(--display);font-size:11.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--bronce-deep)}
+  em.it,.it{font-family:var(--serif);font-style:italic;font-weight:300;text-transform:none;letter-spacing:-.01em;color:var(--bronce-deep)}
+
+  .rv{opacity:0;transform:translateY(26px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+  .rv.in{opacity:1;transform:none}
+  .rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+
+  /* HERO */
+  .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:130px var(--pad) clamp(40px,7vh,70px);position:relative;color:#fff;overflow:hidden}
+  .hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+  .hero .ph{z-index:-2}
+  .hero::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(16,13,9,.55) 0%,rgba(16,13,9,.18) 40%,rgba(16,13,9,.82) 100%)}
+  .hero .kicker{color:var(--bronce-light);margin-bottom:30px}
+  .hero h1{font-family:var(--display);font-weight:800;font-size:clamp(34px,5vw,82px);line-height:1.02;letter-spacing:-.03em;max-width:20ch}
+  .hero h1 .it{color:var(--bronce-light)}
+  .hero .sub{margin-top:30px;max-width:52ch;font-size:clamp(15px,1.4vw,18px);line-height:1.7;color:rgba(244,241,234,.86)}
+  .hero-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-top:clamp(40px,8vh,80px)}
+  .hero .scroll{display:flex;align-items:center;gap:12px;font-family:var(--display);font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,241,234,.8)}
+  .hero .scroll .dot{width:32px;height:32px;border:1px solid rgba(244,241,234,.45);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;animation:bob 2.2s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+  .hero .meta{text-align:right;font-family:var(--display);font-size:11.5px;font-weight:500;letter-spacing:.05em;line-height:1.8;color:rgba(244,241,234,.78);text-transform:uppercase}
+  .hero-ctx{display:flex;gap:clamp(20px,3vw,46px);flex-wrap:wrap;justify-content:flex-end}
+  .hero-ctx .hci{display:flex;flex-direction:column;gap:5px}
+  .hero-ctx .hcl{font-family:var(--display);font-size:9.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--bronce-light)}
+  .hero-ctx .hcv{font-family:var(--display);font-size:12.5px;font-weight:500;letter-spacing:.02em;color:rgba(244,241,234,.92)}
+  @media(max-width:600px){.hero-ctx{justify-content:flex-start;gap:18px 30px}}
+
+  .sec{padding:clamp(80px,12vh,150px) var(--pad)}
+  .sec-head{display:flex;gap:24px;align-items:baseline;margin-bottom:46px;flex-wrap:wrap}
+  .sec-head .sx{white-space:nowrap}
+  h2.big{font-family:var(--display);font-weight:800;font-size:clamp(30px,5.4vw,80px);letter-spacing:-.025em;line-height:.98;text-transform:uppercase}
+  h2.big .it{display:inline}
+
+  /* INVITATION */
+  .invite{border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(30px,6vw,90px);align-items:center}
+  .invite .l h2{font-family:var(--display);font-weight:700;font-size:clamp(26px,3.6vw,54px);line-height:1.05;letter-spacing:-.02em;text-transform:uppercase}
+  .invite .l h2 .it{display:block}
+  .invite .r p{font-size:clamp(16px,1.3vw,18.5px);line-height:1.85;color:var(--tinta-soft);margin-bottom:20px;max-width:58ch}
+  .invite .r p strong{color:var(--tinta);font-weight:600}
+  .invite .tag{margin-top:8px;display:inline-block;font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--bronce-deep);border:1px solid var(--line);padding:9px 16px;border-radius:40px}
+  @media(max-width:840px){.invite{grid-template-columns:1fr;gap:30px}}
+
+  /* APPROACH (dark) */
+  .philo{position:relative;color:#fff;min-height:78vh;display:flex;align-items:center;padding:clamp(80px,12vh,150px) var(--pad);overflow:hidden}
+  .philo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+  .philo .ph{z-index:-2}
+  .philo::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(120deg,rgba(16,13,9,.86),rgba(16,13,9,.46))}
+  .philo .inner{width:100%}
+  .philo .kicker{color:var(--bronce-light);margin-bottom:clamp(36px,6vh,64px)}
+  .philo-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(36px,6vw,90px);align-items:end}
+  .philo h2{font-family:var(--display);font-weight:800;font-size:clamp(30px,4.2vw,60px);line-height:1.05;letter-spacing:-.022em;text-transform:uppercase}
+  .philo h2 .it{color:var(--bronce-light)}
+  .philo .body{max-width:52ch;font-size:clamp(16px,1.2vw,18.5px);line-height:1.85;color:rgba(244,241,234,.88)}
+  .philo .body .em{color:var(--bronce-light);font-weight:600}
+  @media(max-width:840px){.philo-grid{grid-template-columns:1fr;gap:28px;align-items:start}.philo{min-height:auto}}
+
+  /* READING (alternating image / text) */
+  .reading{border-top:1px solid rgba(244,241,234,.12);display:grid;grid-template-columns:1fr 1fr;min-height:86vh;color:#fff;background:var(--tinta)}
+  .reading .img{position:relative;overflow:hidden;background:#16130f;min-height:46vh}
+  .reading .img>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+  .reading .txt{display:flex;flex-direction:column;justify-content:center;padding:clamp(50px,9vh,110px) clamp(28px,5vw,80px)}
+  .reading .kicker{color:var(--bronce-light);margin-bottom:26px}
+  .reading h2{font-family:var(--display);font-weight:800;font-size:clamp(28px,3.7vw,50px);line-height:1.04;letter-spacing:-.025em;text-transform:uppercase}
+  .reading .body{margin-top:26px;max-width:52ch;font-size:clamp(16px,1.15vw,18.5px);line-height:1.85;color:rgba(244,241,234,.88)}
+  .reading .body p+p{margin-top:18px}
+  .reading .signoff{margin-top:30px;font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(17px,1.6vw,23px);color:var(--bronce-light);max-width:34ch;line-height:1.3}
+  .reading.rev .img{order:2}
+  @media(max-width:840px){.reading{grid-template-columns:1fr}.reading.rev .img{order:0}.reading .img{min-height:44vh}}
+
+  /* CRAFT (2x2 materials) */
+  .craft{border-top:1px solid var(--line)}
+  .craft .note{max-width:42ch;font-size:14px;color:var(--tinta-soft);line-height:1.6;margin-left:auto}
+  .cgrid{margin-top:46px;display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,4vw,60px)}
+  .cmat{display:grid;grid-template-columns:clamp(108px,11vw,156px) 1fr;gap:clamp(18px,2.4vw,32px);align-items:start}
+  .cmat .pic{aspect-ratio:3/4;position:relative;overflow:hidden;background:var(--cal-deep)}
+  .cmat .pic>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+  .cmat .nm{font-family:var(--display);font-weight:700;font-size:clamp(18px,1.7vw,23px);text-transform:uppercase;letter-spacing:-.01em}
+  .cmat p{font-size:13.5px;line-height:1.66;color:var(--tinta-soft);margin-top:11px}
+  .cmat .signoff{margin-top:13px;font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(15px,1.3vw,18px);color:var(--bronce-deep);line-height:1.3}
+  @media(max-width:760px){.cgrid{grid-template-columns:1fr;gap:34px}}
+
+  /* STUDIO */
+  .studio{border-top:1px solid var(--line)}
+  .studio .lead{font-family:var(--display);font-weight:700;font-size:clamp(22px,2.5vw,38px);line-height:1.14;letter-spacing:-.02em;text-transform:uppercase;max-width:26ch}
+  .studio .lead .it{text-transform:none}
+  .studio .grid{margin-top:60px;display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(30px,6vw,80px);align-items:start}
+  .studio .copy p{font-size:clamp(15px,1.3vw,17px);line-height:1.78;color:var(--tinta-soft);max-width:52ch;margin-bottom:18px}
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+  .stat{background:var(--cal);padding:30px 26px}
+  .stat .n{font-family:var(--display);font-weight:800;font-size:clamp(30px,3.4vw,50px);letter-spacing:-.03em;line-height:1}
+  .stat .n .it{font-size:.62em}
+  .stat .l{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--tinta-mute);margin-top:12px}
+  @media(max-width:840px){.studio .grid{grid-template-columns:1fr}}
+
+  /* FULL-BLEED + TEAM */
+  .fullbleed{position:relative;min-height:clamp(360px,52vh,560px);overflow:hidden;display:flex;align-items:flex-end;padding:clamp(50px,8vh,80px) var(--pad) clamp(34px,5vh,54px)}
+  .fullbleed>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+  .fullbleed .ph{z-index:0}
+  .fullbleed::after{content:'';position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(16,13,9,.1),rgba(16,13,9,.62))}
+  .fullbleed .cap{position:relative;z-index:3;color:#fff;max-width:34ch}
+  .fullbleed .cap .k{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--bronce-light);margin-bottom:14px}
+  .fullbleed .cap h3{font-family:var(--display);font-weight:800;font-size:clamp(22px,2.6vw,38px);line-height:1.08;letter-spacing:-.02em;text-transform:uppercase}
+  .fullbleed .cap h3 .it{color:var(--bronce-light)}
+  .team{padding:clamp(60px,9vh,110px) var(--pad) clamp(80px,12vh,150px);border-top:1px solid var(--line)}
+  .tgrid{margin-top:38px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  .tgrid.three{grid-template-columns:repeat(3,1fr)}
+  .tcard .pic{aspect-ratio:3/4;position:relative;overflow:hidden;background:var(--cal-deep);filter:grayscale(1);transition:filter .5s}
+  .tcard:hover .pic{filter:grayscale(0)}
+  .tcard .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+  .tcard .nm{font-family:var(--display);font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:-.01em;margin-top:15px}
+  .tcard .ro{font-size:12.5px;color:var(--tinta-soft);margin-top:6px;line-height:1.45}
+  @media(max-width:760px){.tgrid{grid-template-columns:1fr 1fr}}
+
+  /* FOUNDER */
+  .founder{border-top:1px solid var(--line);display:grid;grid-template-columns:.82fr 1.18fr;gap:0;align-items:stretch;background:var(--tinta);color:#fff}
+  .founder-img{position:relative;overflow:hidden;background:#16130f;min-height:clamp(420px,62vh,680px)}
+  .founder-img>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+  .founder-txt{display:flex;flex-direction:column;justify-content:center;padding:clamp(48px,8vh,104px) clamp(30px,5.5vw,84px)}
+  .founder-txt .kicker{color:var(--bronce-light);margin-bottom:26px}
+  .founder-txt h2{font-family:var(--display);font-weight:800;font-size:clamp(30px,3.6vw,52px);line-height:1;letter-spacing:-.03em;text-transform:uppercase}
+  .founder-txt h2 .it{color:var(--bronce-light)}
+  .founder-role{font-family:var(--display);font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,241,234,.6);margin-top:16px}
+  .founder-quote{font-family:var(--sans);font-weight:500;font-size:clamp(17px,1.5vw,22px);line-height:1.5;color:var(--bronce-light);max-width:38ch;margin-top:clamp(26px,4vh,40px)}
+  .founder-body{margin-top:24px;max-width:50ch;font-size:clamp(14.5px,1.05vw,16.5px);line-height:1.78;color:rgba(244,241,234,.8)}
+  @media(max-width:840px){.founder{grid-template-columns:1fr}.founder-img{min-height:54vh}}
+
+  /* TRUSTED BY */
+  .trust{border-top:1px solid var(--line)}
+  .trust .ps{margin-top:10px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+  .trust .p{padding:34px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .25s}
+  .trust .p:hover{background:var(--cal-warm)}
+  .trust .p .nm{font-family:var(--display);font-weight:700;font-size:clamp(15px,1.4vw,20px);text-transform:uppercase;letter-spacing:-.01em}
+  .trust .p .ty{font-family:var(--display);font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--bronce-deep);margin-top:8px;line-height:1.4}
+  @media(max-width:680px){.trust .ps{grid-template-columns:1fr 1fr}}
+
+  /* WORK / FEATURED */
+  .work{border-top:1px solid var(--line)}
+  .work .side{max-width:42ch;font-size:14px;color:var(--tinta-soft);line-height:1.62;margin-left:auto}
+  .work-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+  .feat-label{margin-top:50px;display:flex;align-items:center;gap:16px}
+  .feat-label .t{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--bronce-deep);white-space:nowrap}
+  .feat-label .ln{height:1px;background:var(--line);flex:1}
+  .feature{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:22px}
+  .feature.one{grid-template-columns:1fr}
+  .fcard{position:relative;aspect-ratio:16/11;overflow:hidden;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(24px,3vw,46px);cursor:pointer}
+  .fcard.wide{aspect-ratio:21/9}
+  .fcard>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;transition:transform 1.3s var(--ease)}
+  .fcard .ph{z-index:-2;transition:transform 1.3s var(--ease)}
+  .fcard:hover .ph,.fcard:hover>img{transform:scale(1.04)}
+  .fcard::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(16,13,9,.08) 0%,rgba(16,13,9,.42) 55%,rgba(16,13,9,.88) 100%)}
+  .fcard>*{position:relative;z-index:2}
+  .fcard .badge2{position:absolute;top:clamp(20px,2.4vw,32px);left:clamp(24px,3vw,46px);font-family:var(--display);font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--bronce-light);display:flex;align-items:center;gap:9px}
+  .fcard .badge2::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--bronce-light);animation:pulse 2.4s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(187,168,136,.5)}70%{box-shadow:0 0 0 10px rgba(187,168,136,0)}100%{box-shadow:0 0 0 0 rgba(187,168,136,0)}}
+  .fcard .c{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,241,234,.8);margin-bottom:10px}
+  .fcard h3{font-family:var(--display);font-weight:800;font-size:clamp(24px,2.8vw,42px);line-height:1;letter-spacing:-.02em;text-transform:uppercase}
+  .fcard .gal{margin-top:16px;display:flex;align-items:center;gap:11px;font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#fff}
+  .fcard .gal .arrow{width:30px;height:30px;border:1px solid rgba(255,255,255,.5);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;transition:.25s}
+  .fcard:hover .gal .arrow{background:#fff;color:var(--tinta)}
+  @media(max-width:760px){.feature{grid-template-columns:1fr}}
+
+  .typo{display:flex;gap:7px;flex-wrap:wrap;margin-top:30px}
+  .typo button{font-family:var(--display);font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:10px 18px;border:1px solid var(--line);background:transparent;color:var(--tinta-soft);border-radius:40px;cursor:pointer;transition:.2s}
+  .typo button:hover{border-color:var(--bronce)}
+  .typo button.on{background:var(--tinta);color:var(--cal);border-color:var(--tinta)}
+  .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:26px}
+  .card{cursor:pointer}
+  .card .imgw{aspect-ratio:4/5;overflow:hidden;position:relative;background:var(--cal-deep)}
+  .card .imgw img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;transition:transform 1.1s var(--ease)}
+  .card .imgw .ph{transition:transform 1.1s var(--ease)}
+  .card:hover .imgw img,.card:hover .imgw .ph{transform:scale(1.05)}
+  .card .num{position:absolute;top:15px;left:15px;z-index:3;font-family:var(--display);font-size:10.5px;font-weight:600;letter-spacing:.1em;color:rgba(244,241,234,.6)}
+  .card .imgw .ovl{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;background:rgba(20,16,12,0);transition:.3s}
+  .card:hover .imgw .ovl{background:rgba(20,16,12,.34)}
+  .card .imgw .ovl span{opacity:0;transform:translateY(8px);transition:.3s;font-family:var(--display);font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#fff;border:1px solid #fff;padding:9px 16px;border-radius:40px}
+  .card:hover .imgw .ovl span{opacity:1;transform:none}
+  .card .meta{padding:15px 2px 4px}
+  .card .meta .c{font-family:var(--display);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--bronce-deep);margin-bottom:6px}
+  .card .meta h3{font-family:var(--display);font-weight:700;font-size:clamp(15px,1.4vw,18px);letter-spacing:-.01em;text-transform:uppercase}
+  .card .meta .loc{font-size:12px;color:var(--tinta-mute);margin-top:4px}
+  @media(max-width:760px){.pgrid{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.pgrid{grid-template-columns:1fr}}
+
+  /* MARQUEE */
+  .scale{padding:74px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+  .marq{display:flex;white-space:nowrap;animation:slide 30s linear infinite;width:max-content}
+  .marq span{font-family:var(--display);font-weight:800;font-size:clamp(40px,8vw,108px);letter-spacing:-.02em;text-transform:uppercase;padding-right:56px;line-height:1}
+  .marq span:nth-child(even){color:transparent;-webkit-text-stroke:1.3px var(--bronce)}
+  @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* SCOPE */
+  .scope{border-top:1px solid var(--line)}
+  .scope .note{margin-top:14px;max-width:46ch;font-size:14px;color:var(--tinta-soft);line-height:1.6;margin-left:auto}
+  .sgrid{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .scell{background:var(--cal);padding:38px 30px;min-height:200px;display:flex;flex-direction:column;transition:background .25s;cursor:pointer}
+  .scell:hover{background:var(--cal-warm)}
+  .scell .more{margin-top:16px;font-family:var(--display);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--bronce-deep);opacity:.6;transition:opacity .25s}
+  .scell:hover .more{opacity:1}
+  .scell .ic{font-family:var(--serif);font-style:italic;font-weight:300;font-size:30px;color:var(--bronce);line-height:1}
+  .scell h3{font-family:var(--display);font-weight:700;font-size:clamp(17px,1.6vw,21px);text-transform:uppercase;letter-spacing:-.01em;margin-top:auto}
+  .scell p{font-size:13.5px;line-height:1.62;color:var(--tinta-soft);margin-top:12px}
+  .scell .badge{margin-top:14px;align-self:flex-start;font-family:var(--display);font-size:9.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--bronce-deep);border:1px solid var(--line);padding:5px 10px;border-radius:30px}
+  @media(max-width:760px){.sgrid{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.sgrid{grid-template-columns:1fr}}
+
+  /* AREAS */
+  .areas{border-top:1px solid var(--line);background:var(--cal-warm)}
+  .floor-tags{margin-top:42px;display:flex;gap:12px;flex-wrap:wrap}
+  .floor-tags .ft{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--bronce-deep);border:1px solid var(--line);padding:9px 16px;border-radius:40px;background:var(--cal)}
+  .floor-tags .ft-mute{color:var(--tinta-mute);border-style:dashed}
+  .rgrid{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .rcard{background:var(--cal);padding:30px 26px 32px;display:flex;flex-direction:column;min-height:188px;transition:background .25s}
+  .rcard:hover{background:var(--cal-warm)}
+  .rcard .rn{font-family:var(--display);font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--bronce);line-height:1}
+  .rcard .rf{font-family:var(--display);font-size:9.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--tinta-mute);margin-top:8px}
+  .rcard h4{font-family:var(--display);font-weight:700;font-size:clamp(17px,1.55vw,21px);letter-spacing:-.01em;margin-top:14px;line-height:1.1}
+  .rcard p{font-size:13px;line-height:1.6;color:var(--tinta-soft);margin-top:10px}
+  .rcard--hero{background:var(--tinta);color:#fff}
+  .rcard--hero:hover{background:#16130f}
+  .rcard--hero .rn{color:var(--bronce-light)}
+  .rcard--hero .rf{color:var(--bronce-light)}
+  .rcard--hero h4{color:#fff}
+  .rcard--hero p{color:rgba(244,241,234,.82)}
+  @media(max-width:840px){.rgrid{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.rgrid{grid-template-columns:1fr}}
+
+  /* INVESTMENT */
+  .invest{border-top:1px solid var(--line)}
+  .invest .grid{margin-top:46px;display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,72px);align-items:start}
+  .price{border:1px solid var(--line);background:var(--cal-warm);padding:clamp(30px,4vw,52px)}
+  .price .label{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--bronce-deep)}
+  .price .desc{font-size:14px;color:var(--tinta-soft);margin-top:10px;line-height:1.55}
+  .price .fig{font-family:var(--display);font-weight:800;font-size:clamp(38px,6vw,72px);letter-spacing:-.035em;line-height:1;margin-top:26px}
+  .price .fig small{font-family:var(--display);font-weight:600;font-size:.26em;letter-spacing:.06em;color:var(--tinta-mute);display:inline-block;margin-left:8px;text-transform:uppercase;vertical-align:middle}
+  .price .ph-note{margin-top:14px;font-family:var(--display);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--bronce-deep)}
+  .terms h4{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--bronce-deep);margin-bottom:8px}
+  .terms ul{list-style:none;margin:0 0 30px}
+  .terms li{font-size:14.5px;color:var(--tinta-soft);padding:10px 0;border-bottom:1px solid var(--line-soft);display:flex;gap:14px}
+  .terms li b{font-family:var(--display);color:var(--tinta);font-weight:700;min-width:42px}
+  .addr{margin-top:8px;padding:22px 24px;border:1px dashed var(--line);background:var(--cal)}
+  .addr .h{font-family:var(--display);font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--tinta-mute);margin-bottom:10px}
+  .addr p{font-size:14px;color:var(--tinta-soft);line-height:1.7}
+  .addr p b{color:var(--tinta);font-weight:600}
+  @media(max-width:840px){.invest .grid{grid-template-columns:1fr}}
+
+  /* CTA / FOOTER */
+  .cta{background:var(--tinta);color:var(--cal);padding:clamp(90px,16vh,180px) var(--pad);text-align:center}
+  .cta .kicker{color:var(--bronce-light);margin-bottom:30px}
+  .cta h2{font-family:var(--display);font-weight:800;font-size:clamp(32px,5.6vw,84px);letter-spacing:-.03em;line-height:.98;text-transform:uppercase}
+  .cta h2 .it{color:var(--bronce-light)}
+  .cta .line{margin:30px auto 0;max-width:48ch;font-size:clamp(15px,1.4vw,18px);line-height:1.7;color:rgba(244,241,234,.78)}
+  .cta .line .em{color:var(--bronce-light);font-family:var(--serif);font-style:italic;font-weight:300}
+  .cta a.btn{display:inline-block;margin-top:42px;font-family:var(--display);font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;background:var(--cal);color:var(--tinta);padding:16px 34px;border-radius:40px;transition:.25s}
+  .cta a.btn:hover{background:var(--bronce);color:#fff}
+  .foot{background:var(--tinta);color:var(--cal);padding:0 var(--pad) 44px}
+  .foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;padding:60px 0;border-top:1px solid rgba(244,241,234,.16)}
+  .foot-col h4{font-family:var(--display);font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--bronce);margin-bottom:16px}
+  .foot-col a,.foot-col p{display:block;font-family:var(--display);font-size:14px;color:rgba(244,241,234,.78);margin-bottom:9px}
+  .foot-col a:hover{color:var(--cal)}
+  .foot-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;padding-top:26px;font-family:var(--display);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:rgba(244,241,234,.5)}
+  .foot-bot .big{font-family:var(--display);font-weight:800;font-size:13px;letter-spacing:.03em;color:var(--cal)}
+  .foot-bot .big small{font-weight:600;letter-spacing:.3em;opacity:.6;font-size:9px;display:block;margin-top:3px}
+
+  /* LIGHTBOX */
+  .lb{position:fixed;inset:0;z-index:300;background:rgba(12,10,7,.97);display:none;padding:clamp(14px,2.4vw,34px)}
+  .lb.open{display:block}
+  .lb-close{position:absolute;top:clamp(14px,2.4vw,30px);right:clamp(14px,2.4vw,34px);z-index:6;font-family:var(--display);font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#fff;border:1px solid rgba(255,255,255,.4);background:rgba(12,10,7,.4);padding:11px 18px;border-radius:40px;cursor:pointer;transition:.2s}
+  .lb-close:hover{background:#fff;color:var(--tinta)}
+  .lb-inner{height:100%;display:grid;grid-template-columns:1.6fr .9fr;gap:clamp(16px,2vw,30px)}
+  .lb-gallery{display:flex;flex-direction:column;min-height:0}
+  .lb-stage{flex:1;position:relative;min-height:0;overflow:hidden;background:#16130f}
+  .lb-stage .slide{position:absolute;inset:0;opacity:0;transition:opacity .4s;pointer-events:none}
+  .lb-stage .slide.on{opacity:1;pointer-events:auto}
+  .lb-stage .slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+  .lb-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:4;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:rgba(12,10,7,.45);color:#fff;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s}
+  .lb-nav:hover{background:#fff;color:var(--tinta)}
+  .lb-prev{left:14px}.lb-next{right:14px}
+  .lb-foot{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:12px;flex-wrap:wrap}
+  .lb-thumbs{display:flex;gap:6px;flex-wrap:wrap}
+  .lb-thumbs .th{width:58px;height:42px;position:relative;overflow:hidden;cursor:pointer;opacity:.5;transition:.2s;border:1px solid transparent}
+  .lb-thumbs .th-video .play{position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:center;font-size:13px;color:#fff;background:rgba(12,10,7,.45);text-shadow:0 1px 4px rgba(0,0,0,.6)}
+  .lb-thumbs .th:hover{opacity:.85}
+  .lb-thumbs .th.on{opacity:1;border-color:var(--bronce-light)}
+  .lb-thumbs .th img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+  .lb-count{font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:.1em;color:rgba(244,241,234,.7);white-space:nowrap}
+  .lb-info{color:#fff;overflow-y:auto;padding-right:6px}
+  .lb-info .c{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--bronce-light);margin:34px 0 10px}
+  .lb-info h3{font-family:var(--display);font-weight:800;font-size:clamp(22px,2.1vw,34px);text-transform:uppercase;letter-spacing:-.01em;line-height:1.02}
+  .lb-info .loc{font-family:var(--display);font-size:12.5px;color:rgba(244,241,234,.6);margin-top:8px;letter-spacing:.04em}
+  .lb-block{margin-top:26px}
+  .lb-block h4{font-family:var(--display);font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--bronce-light);margin-bottom:10px}
+  .lb-block p{font-size:14.5px;line-height:1.72;color:rgba(244,241,234,.86)}
+  .lb-block ul{margin:4px 0 0;padding-left:18px;list-style:none}
+  .lb-block li{position:relative;font-size:14px;line-height:1.6;color:rgba(244,241,234,.86);padding-left:16px;margin-bottom:9px}
+  .lb-block li::before{content:'';position:absolute;left:0;top:9px;width:5px;height:5px;border-radius:50%;background:var(--bronce-light)}
+  .lb-block li b{color:#fff;font-weight:600}
+  .lb.lb-noimg .lb-inner{grid-template-columns:1fr;max-width:900px;margin:0 auto}
+  .lb.lb-noimg .lb-gallery{display:none}
+  .lb.lb-noimg .lb-info{overflow-y:auto}
+  @media(max-width:900px){.work-head,.sec-head{flex-wrap:wrap}.work .side,.scope .note{margin-left:0}.lb-inner{grid-template-columns:1fr;height:auto}.lb{overflow-y:auto}.lb-stage{height:52vh}.lb-info .c{margin-top:18px}}
+
+  /* MOBILE */
+  @media(max-width:600px){
+    :root{--pad:20px}
+    .nav-in{padding:16px var(--pad)} .nav .logo{font-size:13px} .nav .logo small{letter-spacing:.26em;font-size:8px}
+    .hero{padding:118px var(--pad) 38px} .hero h1{font-size:clamp(29px,8.4vw,40px);max-width:18ch} .hero .sub{font-size:15px;max-width:42ch} .hero .meta,.hero .scroll{font-size:10px}
+    h2.big{font-size:clamp(27px,8vw,38px)} .invite .l h2{font-size:clamp(25px,7.6vw,36px)}
+    .philo h2,.reading h2{font-size:clamp(25px,7.2vw,36px)} .philo .body,.reading .body{font-size:15px}
+    .studio .lead{font-size:clamp(20px,5.8vw,29px)} .stat{padding:24px 18px} .stat .n{font-size:clamp(28px,9.5vw,40px)}
+    .fullbleed .cap h3{font-size:clamp(21px,6.6vw,30px)}
+    .marq span{font-size:clamp(34px,12vw,56px)} .cta h2{font-size:clamp(30px,8.4vw,48px)}
+    .price .fig{font-size:clamp(34px,11vw,56px)}
+    .lb-close{top:12px;right:12px;padding:9px 14px;font-size:10px} .lb-stage{height:46vh} .lb-info h3{font-size:clamp(20px,6.4vw,28px)}
+  }
+
+  @media print{
+    .nav,.progress,.hero .scroll,.scale{display:none}
+    body{background:#fff} .hero,.philo,.reading,.fullbleed,.founder{min-height:auto;color:#000}
+    .hero::after,.philo::after,.reading,.fullbleed::after,.founder{background:#fff !important}
+    .founder,.founder-txt h2,.founder-role,.founder-body{color:#000 !important}
+    .founder-quote{color:#6F5E44 !important}
+    .ph{background:#e8e2d6 !important} section{padding:26px 28px !important;break-inside:avoid}
+    .cta,.foot,.philo,.reading,.fullbleed{background:#fff !important;color:#000 !important}
+    .reading .body,.philo .body,.cta .line{color:#333 !important}
+  }
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-in">
+    <div class="nav-left"><span class="ctx">Lighting Design Proposal</span></div>
+    <div class="logo">KAREN MANNHEIM<small>LIGHTING STUDIO</small></div>
+    <div class="nav-right"><span class="ctx">41 Arvida · Coral Gables</span></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <img src="assets/arvida/hero.jpg" alt="" onerror="this.remove()">
+  <div class="ph" data-label="Hero — 41 Arvida at dusk (warm, cinematic)"></div>
+  <div class="kicker rv">Lighting Design Proposal · 41 Arvida · Confidential</div>
+  <h1 class="rv d1">For a lifetime the light has been pointed at him.<br>Here, he decides where it <span class="it">falls.</span></h1>
+  <p class="sub rv d2">Studio Valle de Valle is reimagining the interiors of 41 Arvida. We were invited to design the light that lives inside them — for a client who has spent a career being seen, and a home built so he can choose, for once, when he isn't. This is how we'd read this house, and how we'd light it.</p>
+  <div class="hero-foot">
+    <div class="scroll rv d2"><span class="dot">↓</span> Read the house</div>
+    <div class="hero-ctx rv d3">
+      <div class="hci"><span class="hcl">Scope</span><span class="hcv">Renovated interiors</span></div>
+      <div class="hci"><span class="hcl">With</span><span class="hcv">Studio Valle de Valle</span></div>
+      <div class="hci"><span class="hcl">Location</span><span class="hcv">Gables Estates · Coral Gables</span></div>
+      <div class="hci"><span class="hcl">Studio</span><span class="hcv">Lima · Miami · Madrid</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- 01 THE INVITATION -->
+<section class="sec invite" id="invite">
+  <div class="l rv">
+    <div class="sx" style="margin-bottom:24px">01 — The Invitation</div>
+    <h2>We don't pitch.<span class="it">We partner.</span></h2>
+  </div>
+  <div class="r rv d1">
+    <p>You chose plaster, iroko, microcement, felt — surfaces that were chosen to be <strong>felt</strong>, not to shine. Our scope is the renovated areas, and our role is singular: to reveal what you specified, never to compete with it.</p>
+    <p>This is the part most lighting plans get wrong. They light the room. We light the <strong>material</strong>, and let the room follow. The plaster wants grazing light; the felt wants to be lit from anywhere but the front; the microcement gives almost nothing back, so every fixture has to earn its place. None of that is visible in a render. All of it is the difference between a space and a space you don't want to leave.</p>
+    <p>What follows is how we read this house, the work that stands behind us, and the way we'd light it — in dialogue with you, at every stage.</p>
+    <span class="tag">Scope · Renovated interiors · with Studio Valle de Valle</span>
+  </div>
+</section>
+
+<!-- 02 THE APPROACH -->
+<section class="reading rev" id="approach">
+  <div class="img"><img src="assets/arvida/approach.jpg" alt="" onerror="this.remove()"><div class="ph" data-label="Warm cinematic still — interior at dusk, single low source"></div></div>
+  <div class="txt rv">
+    <div class="kicker">02 — The Approach · i</div>
+    <h2>Long before the music, there was the <span class="it">cinema.</span></h2>
+    <p class="body">The person who will live here thinks in frames before he thinks in rooms. Before the stage, before the records, the first language was film — and film taught him that light is never neutral. It withholds as much as it reveals. A face half in shadow. A room you read by what's left dark.</p>
+    <p class="body">So we don't light this house to be seen. We light it the way a cinematographer lights a scene — for control, for restraint, for the feeling before the eye even names it. The artist has spent a career inside the most engineered light in the world. The person comes home to the opposite.</p>
+    <div class="signoff">Not lit for the camera — lit for the person who steps out of frame.</div>
+  </div>
+</section>
+
+<!-- 02b THE LANGUAGE OF CINEMA -->
+<section class="reading" id="cinema">
+  <div class="img"><img src="assets/arvida/cinema.jpg" alt="" onerror="this.remove()"><div class="ph" data-label="Chiaroscuro frame — cool shadow, hard single key light"></div></div>
+  <div class="txt rv">
+    <div class="kicker">02 — A Shared Language · ii</div>
+    <h2>We light in the grammar he already <span class="it">reads.</span></h2>
+    <p class="body">A film lover's eye is trained on a specific kind of light. The controlled dark of Kubrick, where precision is the whole point and nothing is lit by accident. The low, uneasy glow of Lynch, where a room means more for what it hides than what it shows. That isn't decoration — it's a way of seeing, and it's exactly how we work.</p>
+    <p class="body">Single, intentional sources over flooded rooms. Gallery-grade light that lets material lead. Deliberate pools of shadow that make warmth feel warmer. You won't have to translate your references for us.</p>
+    <div class="signoff">The studio that knows when not to add light is the one that understands it.</div>
+  </div>
+</section>
+
+<!-- 03 READING ARVIDA 01 -->
+<section class="reading rev" id="material">
+  <div class="img"><img src="assets/arvida/material.jpg" alt="" onerror="this.remove()"><div class="ph" data-label="Material — plaster · iroko · microcement · felt"></div></div>
+  <div class="txt rv">
+    <div class="kicker">Reading Arvida — 01</div>
+    <h2>Material first.</h2>
+    <p class="body">This house was designed to be touched. Plaster, iroko, microcement, felt — surfaces chosen for warmth and texture, not for shine. They don't reflect light; they hold it. Our work isn't to add brightness, but to let each material reveal what it already is.</p>
+    <div class="signoff">Light as a way of seeing the craft — not hiding it.</div>
+  </div>
+</section>
+
+<!-- 04 READING ARVIDA 02 -->
+<section class="reading" id="musician">
+  <div class="img"><img src="assets/arvida/mood.jpg" alt="" onerror="this.remove()"><div class="ph" data-label="Mood — booth · screening · studio"></div></div>
+  <div class="txt rv">
+    <div class="kicker">Reading Arvida — 02</div>
+    <h2>The screening room is the heart, not an amenity.</h2>
+    <p class="body">In most homes the cinema is a feature. Here it's the center of gravity — the room a film lover actually lives toward. So we treat the whole house with a director's logic: light built in scenes, not switches. Pools of warmth and deliberate dark. The dome above the stair that stays dark on purpose, so the glow below feels warmer. A home where atmosphere is composed, the way a scene is — and where, when the lights go down, nothing pulls your eye away from the screen.</p>
+    <div class="signoff">Lit the way a film is graded — for feeling, not for brightness.</div>
+  </div>
+</section>
+
+<!-- 05 OUR CRAFT -->
+<section class="sec craft" id="craft">
+  <div class="work-head">
+    <div class="rv">
+      <div class="sx" style="margin-bottom:18px">05 — Our Craft</div>
+      <h2 class="big">How we light<br>what you're <span class="it">building</span></h2>
+    </div>
+    <div class="note rv d1">Four materials, four decisions. This is the difference between a lighting plan and a room you don't want to leave.</div>
+  </div>
+  <div class="cgrid">
+    <div class="cmat rv"><div class="pic"><img src="assets/arvida/plaster.jpg" alt="" onerror="this.remove()"><div class="ph" data-label="Plaster"></div></div><div><div class="nm">Plaster</div><p>Curved, hand-finished, no shine to hide behind. Grazing light only — a low raking wash, close to the wall, along the curve. Skim it and it reads as texture, not surface.</p><div class="signoff">The quiet drama of the stair.</div></div></div>
+    <div class="cmat rv d1"><div class="pic"><img src="assets/arvida/wood.jpg" alt="" onerror="this.remove()"><div class="ph" data-label="Iroko & teak"></div></div><div><div class="nm">Wood — iroko &amp; teak</div><p>Warm, directional, full of grain. Tight accents raked across the figure, color temperature held golden. Never flooded — the grain reads as depth, not gloss.</p><div class="signoff">Lit from within, not spotlit from above.</div></div></div>
+    <div class="cmat rv"><div class="pic"><img src="assets/arvida/microcement.jpg" alt="" onerror="this.remove()"><div class="ph" data-label="Microcement"></div></div><div><div class="nm">Microcement</div><p>Soft, matte, seamless — almost no reflectance. One well-placed source, grazing or concealed, over many. Restraint keeps the surface continuous.</p><div class="signoff">Less light, better placed.</div></div></div>
+    <div class="cmat rv d1"><div class="pic"><img src="assets/arvida/felt.jpg" alt="" onerror="this.remove()"><div class="ph" data-label="Acoustic felt"></div></div><div><div class="nm">Acoustic felt</div><p>Absorbs sound and light alike. Indirect, warm, layered low — never aimed at the panels. The surface stays matte, the room closes in around you.</p><div class="signoff">Light you sit inside, not under.</div></div></div>
+  </div>
+</section>
+
+<!-- 06 THE ARRIVAL -->
+<section class="philo" id="arrival">
+  <img src="assets/arvida/stair.jpg" alt="" onerror="this.remove()">
+  <div class="ph" data-label="The spiral stair — curved plaster · twin palms · dark dome"></div>
+  <div class="inner rv">
+    <div class="kicker">06 — The Arrival</div>
+    <div class="philo-grid">
+      <h2>The spiral <span class="it">stair.</span></h2>
+      <p class="body">The first thing the house says about itself. We'd light it as a slow reveal — soft grazing along the curved plaster, so the wall glows from within. The palms catch a quiet, low accent. And the dark dome above stays dark, deliberately: a pool of shadow that makes the warmth below feel even warmer.<br><br>Nothing should feel switched on. It should feel like the house was always this way, and you simply walked in at the right hour.<br><br><span class="em">Arrival as atmosphere — the first note of the house.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- 07 WE'VE DONE THIS BEFORE -->
+<section class="sec work" id="proof">
+  <div class="work-head">
+    <div class="rv">
+      <div class="sx" style="margin-bottom:18px">07 — The Company We Keep</div>
+      <h2 class="big">We've done<br>this <span class="it">before</span></h2>
+    </div>
+    <div class="side rv d1">We light homes for people the world recognizes and rarely gets to see inside. The discretion is the point — we speak this language fluently, and we keep it to ourselves. The stakes here are familiar to us.</div>
+  </div>
+
+  <div class="feat-label rv d1"><span class="t">Currently in design</span><span class="ln"></span></div>
+  <div class="feature">
+    <article class="fcard rv" data-project="neymar"><img src="assets/neymar/1.jpg" alt="" onerror="this.remove()"><div class="ph" data-label="Neymar residence"></div><div class="badge2">Under design · 2026</div><div class="c">Private Residence · Confidential</div><h3>Neymar Jr.</h3><div class="gal">View gallery <span class="arrow">→</span></div></article>
+    <article class="fcard rv d1" data-project="gustavo"><img src="assets/gustavo/1.jpg" alt="" onerror="this.remove()"><div class="ph" data-label="Gusttavo Lima residence"></div><div class="badge2">Under design · 2026</div><div class="c">Private Residence · Confidential</div><h3>Gusttavo Lima</h3><div class="gal">View gallery <span class="arrow">→</span></div></article>
+    <article class="fcard rv" data-project="yacht"><img src="assets/yacht/1.jpg" alt="" onerror="this.remove()"><div class="ph" data-label="Superyacht"></div><div class="badge2">Under design · 2026</div><div class="c">Private Asset · Marine</div><h3>Superyacht</h3><div class="gal">View gallery <span class="arrow">→</span></div></article>
+    <article class="fcard rv d1" data-project="jet"><img src="assets/jet/1.jpg" alt="" onerror="this.remove()"><div class="ph" data-label="Private jet"></div><div class="badge2">Under design · 2026</div><div class="c">Private Asset · Aviation</div><h3>Private Jet</h3><div class="gal">View gallery <span class="arrow">→</span></div></article>
+  </div>
+
+  <div class="feat-label rv d1"><span class="t">On the world stage</span><span class="ln"></span></div>
+  <div class="feature one">
+    <article class="fcard wide rv" data-project="saadiyat"><img src="assets/saadiyat/1.jpg" alt="" onerror="this.remove()"><div class="ph" data-label="Saadiyat Nights — Abu Dhabi"></div><div class="c">Cultural · Venue · Abu Dhabi</div><h3>Saadiyat Nights</h3><div class="gal">View gallery <span class="arrow">→</span></div></article>
+  </div>
+</section>
+
+<!-- 08 SELECTED WORK -->
+<section class="sec work" id="work" style="border-top:none;padding-top:0">
+  <div class="work-head">
+    <div class="rv">
+      <div class="sx" style="margin-bottom:18px">08 — Selected Work</div>
+      <h2 class="big">A portfolio,<br>by <span class="it">typology</span></h2>
+    </div>
+    <div class="side rv d1">The same studio that lights an art collector's home lights a tower, a beach house, a flagship. Click any project to open its story.</div>
+  </div>
+  <div class="typo rv d1">
+    <button class="on" data-f="all">All</button>
+    <button data-f="res">Residential</button>
+    <button data-f="multi">Multifamily</button>
+    <button data-f="comm">Commercial</button>
+  </div>
+  <div class="pgrid" id="grid">
+    <article class="card rv" data-c="res" data-project="collector"><div class="imgw"><img src="assets/collector/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Collector residence"></div><span class="num">01</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Private Collection</div><h3>A Private Art Collector's Residence</h3><div class="loc">Confidential</div></div></article>
+    <article class="card rv" data-c="res" data-project="palmbeach"><div class="imgw"><img src="assets/palmbeach/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Palm Beach residence"></div><span class="num">02</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Wecselman Design</div><h3>A Palm Beach Residence</h3><div class="loc">Palm Beach</div></div></article>
+    <article class="card rv" data-c="res" data-project="pezet3"><div class="imgw"><img src="assets/pezet3/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Pezet 3"></div><span class="num">03</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · RAMSA</div><h3>Pezet 3</h3><div class="loc">Lima</div></div></article>
+    <article class="card rv" data-c="res" data-project="moraleja"><div class="imgw"><img src="assets/moraleja/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="La Moraleja"></div><span class="num">04</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · MORPH Studio</div><h3>La Moraleja Residence</h3><div class="loc">Madrid</div></div></article>
+    <article class="card rv" data-c="res" data-project="mariana"><div class="imgw"><img src="assets/mariana/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Private apartment"></div><span class="num">05</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Private</div><h3>A Private Apartment</h3><div class="loc">Confidential</div></div></article>
+    <article class="card rv" data-c="res" data-project="kathy"><div class="imgw"><img src="assets/kathy/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Private family residence"></div><span class="num">06</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Private</div><h3>A Private Family Residence</h3><div class="loc">Confidential</div></div></article>
+    <article class="card rv" data-c="comm" data-project="vivagym"><div class="imgw"><img src="assets/vivagym/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Viva Gym"></div><span class="num">07</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Commercial · Wellness</div><h3>Viva Gym Building</h3><div class="loc">—</div></div></article>
+    <article class="card rv" data-c="multi" data-project="blascerdena"><div class="imgw"><img src="assets/blascerdena/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Blas Cerdeña"></div><span class="num">08</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Multifamily · RAMSA</div><h3>Blas Cerdeña</h3><div class="loc">Lima</div></div></article>
+    <article class="card rv" data-c="res" data-project="poseidon"><div class="imgw"><img src="assets/poseidon/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Poseidón beach house"></div><span class="num">09</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Beachfront</div><h3>Poseidón Beach House</h3><div class="loc">Lima</div></div></article>
+    <article class="card rv" data-c="res" data-project="fisher"><div class="imgw"><img src="assets/fisher/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Fisher Island"></div><span class="num">10</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Adriana Hoyos</div><h3>Fisher Island Apartment</h3><div class="loc">Miami</div></div></article>
+    <article class="card rv" data-c="res" data-project="golden"><div class="imgw"><img src="assets/golden/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Golden Beach residence"></div><span class="num">11</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Oppenheim Architecture</div><h3>A Private Residence</h3><div class="loc">Golden Beach</div></div></article>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<section class="scale">
+  <div class="marq">
+    <span>Light as the soul of the architecture —</span>
+    <span>Light as the soul of the architecture —</span>
+    <span>Light as the soul of the architecture —</span>
+    <span>Light as the soul of the architecture —</span>
+  </div>
+</section>
+
+<!-- 09 THE STUDIO -->
+<section class="sec studio" id="studio">
+  <div class="sec-head rv"><div class="sx">09 — The Studio</div></div>
+  <div class="lead rv d1">For 33 years, Karen Mannheim Lighting Studio has done one thing: make light give a space its <span class="it">meaning</span>.</div>
+  <div class="grid">
+    <div class="copy rv">
+      <p>What began as one person knocking on doors in Lima is now a practice of more than 80 people across three continents, with offices in Lima, Miami and Madrid. For a Coral Gables home, our Miami studio is already next door — not flying in, but here.</p>
+      <p>We've delivered more than 2,500 projects across six countries, working alongside firms like RAMSA, Oppenheim and Adriana Hoyos. But the number that matters most isn't on this list: it's that after three decades and that much scale, the studio still designs each project as if it were the only one. The throughline never changed — light, here, is never decoration. It's the soul of the architecture.</p>
+    </div>
+    <div class="stats rv d1">
+      <div class="stat"><div class="n">33<span class="it">+</span></div><div class="l">Years of practice</div></div>
+      <div class="stat"><div class="n">2,500<span class="it">+</span></div><div class="l">Projects delivered</div></div>
+      <div class="stat"><div class="n">80<span class="it">+</span></div><div class="l">People in the studio</div></div>
+      <div class="stat"><div class="n">6</div><div class="l">Countries · 3 offices</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE ARE — FOUNDER -->
+<section class="founder" id="founder">
+  <div class="founder-img rv">
+    <img src="assets/studio/karen.jpg" alt="" onerror="this.remove()">
+    <div class="ph" data-label="Karen Mannheim — Founder &amp; Creative Director portrait"></div>
+  </div>
+  <div class="founder-txt rv d1">
+    <div class="kicker">Who we are</div>
+    <h2>Karen <span class="it">Mannheim.</span></h2>
+    <div class="founder-role">Founder &amp; Creative Director</div>
+    <p class="founder-quote">“I don't design light to be noticed. I design it so the room, the material, the person living there all feel inevitable. The best light in a home is the one no one ever thinks about. They just never want to leave.”</p>
+    <p class="founder-body">Karen has spent more than three decades building one of the few lighting practices that works at the level of the world's most demanding architecture firms — and keeps the soul of a studio. She leads the design on every project the studio takes, and she'd lead this one. When you work with Karen Mannheim Lighting Studio, you're not handed to a team. You start with her.</p>
+  </div>
+</section>
+
+<!-- 10 TRUSTED BY -->
+<section class="sec trust" id="trust">
+  <div class="sec-head rv"><div class="sx">10 — Trusted By</div></div>
+  <h2 class="big rv d1">The firms who <span class="it">trust KMLS</span></h2>
+  <div class="ps rv d1">
+    <div class="p"><div class="nm">RAMSA</div><div class="ty">Robert A.M. Stern Architects</div></div>
+    <div class="p"><div class="nm">MORPH Arquitectura</div><div class="ty">World's Top 100 Firms</div></div>
+    <div class="p"><div class="nm">Oppenheim</div><div class="ty">Architecture</div></div>
+    <div class="p"><div class="nm">Adriana Hoyos</div><div class="ty">Design Studio</div></div>
+    <div class="p"><div class="nm">Wecselman</div><div class="ty">Design · Florida</div></div>
+    <div class="p"><div class="nm">Kobi Karp</div><div class="ty">Architecture &amp; Interiors</div></div>
+    <div class="p"><div class="nm">Fernanda Márquez</div><div class="ty">São Paulo · Lisboa · Vancouver · London</div></div>
+    <div class="p"><div class="nm">Legeard Studio</div><div class="ty">New York</div></div>
+    <div class="p"><div class="nm">2id Interiors</div><div class="ty">Miami</div></div>
+    <div class="p"><div class="nm">Llosa Cortegana</div><div class="ty">Architects</div></div>
+    <div class="p"><div class="nm">Studio Valle de Valle</div><div class="ty">Interiors · New York · 41 Arvida</div></div>
+    <div class="p"><div class="nm">Four Seasons</div><div class="ty">Residences</div></div>
+  </div>
+</section>
+
+<!-- 11 SCOPE OF WORK -->
+<section class="sec scope" id="scope">
+  <div class="work-head">
+    <div class="rv">
+      <div class="sx" style="margin-bottom:18px">11 — Scope of Work</div>
+      <h2 class="big">A complete <span class="it">methodology</span><span style="display:block;font-size:.4em;letter-spacing:.04em;color:var(--bronce-deep);margin-top:12px">Our Scope of Work</span></h2>
+    </div>
+    <div class="note rv d1">Organized in the three contractual stages, in coordination with Studio Valle de Valle. Click any stage to open its full deliverables.</div>
+  </div>
+  <div class="sgrid">
+    <div class="scell rv" data-project="stage-1"><div class="ic">01</div><h3>Stage 1 — Lighting Design</h3><p>Concept, fixture design, control system, photometric calculations and a full construction dossier.</p><span class="more">Open stage →</span></div>
+    <div class="scell rv d1" data-project="stage-2"><div class="ic">02</div><h3>Stage 2 — Lighting Design Management</h3><p>Coordination, change management and scene calibration through construction.</p><span class="more">Open stage →</span></div>
+    <div class="scell rv d2" data-project="stage-3"><div class="ic">03</div><h3>Stage 3 — On-Site Management</h3><p>Site visits, supervision and light testing until everything is exactly right.</p><span class="more">Open stage →</span></div>
+  </div>
+</section>
+
+<!-- 12 THE RENOVATED AREAS -->
+<section class="sec areas" id="areas">
+  <div class="work-head">
+    <div class="rv">
+      <div class="sx" style="margin-bottom:18px">12 — The Renovated Areas</div>
+      <h2 class="big">Room by room,<br>a <span class="it">point of view</span></h2>
+    </div>
+    <div class="note rv d1">Per Studio Valle de Valle's drawings. Lighting scope covers the renovated areas only — but we don't read them as a list. Each room already has an intention.</div>
+  </div>
+
+  <div class="floor-tags rv d1">
+    <span class="ft">First Floor · 8 rooms</span>
+    <span class="ft">Second Floor · 4 rooms</span>
+    <span class="ft ft-mute">[ 000 m² · to be confirmed ]</span>
+  </div>
+
+  <div class="rgrid rv d1">
+    <div class="rcard"><span class="rn">01</span><span class="rf">First Floor</span><h4>Entry Stair</h4><p>A slow reveal. Grazing light on curved plaster; the dome left dark.</p></div>
+    <div class="rcard"><span class="rn">02</span><span class="rf">First Floor</span><h4>Entry Room · Bar</h4><p>Low and intimate — the first shift in mood as you arrive.</p></div>
+    <div class="rcard"><span class="rn">03</span><span class="rf">First Floor</span><h4>Entry Room · Library</h4><p>Warm pools for reading; shelves lit to invite, not to display.</p></div>
+    <div class="rcard"><span class="rn">04</span><span class="rf">First Floor</span><h4>Great Room</h4><p>Layered scenes — from full gather to single-lamp quiet.</p></div>
+    <div class="rcard"><span class="rn">05</span><span class="rf">First Floor</span><h4>Breakfast Room</h4><p>Morning light extended; tuned to the body's early clock.</p></div>
+    <div class="rcard"><span class="rn">06</span><span class="rf">First Floor</span><h4>Dining Room</h4><p>One considered source over the table; everything else recedes.</p></div>
+    <div class="rcard"><span class="rn">07</span><span class="rf">First Floor</span><h4>Office</h4><p>Focused and glare-free, calibrated for long hours and the screen.</p></div>
+    <div class="rcard"><span class="rn">08</span><span class="rf">First Floor</span><h4>Powder Room</h4><p>Flattering, soft, never clinical — light you look good in.</p></div>
+    <div class="rcard"><span class="rn">09</span><span class="rf">Second Floor</span><h4>Primary Bedroom</h4><p>The last light of the day — dimmable to almost nothing, warm at the floor.</p></div>
+    <div class="rcard"><span class="rn">10</span><span class="rf">Second Floor</span><h4>Primary Bathroom</h4><p>Vertical, even light at the mirror; a separate calm layer for night.</p></div>
+    <div class="rcard"><span class="rn">11</span><span class="rf">Second Floor</span><h4>Home Studio &amp; Booth</h4><p>Indirect and warm, never into the felt — light you sit inside.</p></div>
+    <div class="rcard rcard--hero"><span class="rn">12</span><span class="rf">Second Floor · the heart</span><h4>Screening Room</h4><p>Graded for cinema. Zero glare, scene-controlled — the room the whole house is built toward.</p></div>
+  </div>
+</section>
+
+<!-- 13 INVESTMENT -->
+<section class="sec invest" id="investment">
+  <div class="sec-head rv"><div class="sx">13 — The Proposal</div></div>
+  <h2 class="big rv d1">Investment</h2>
+  <div class="grid">
+    <div class="price rv">
+      <div class="label">Integral Lighting Design</div>
+      <div class="desc">Renovated areas · Concept through Supervision · all stages included</div>
+      <div class="fig">$ 00,000 <small>USD</small></div>
+      <div class="ph-note">Placeholder — fee to be confirmed on final scope</div>
+    </div>
+    <div class="terms rv d1">
+      <h4>Payment terms</h4>
+      <ul>
+        <li><b>70%</b> Upon signature, to begin</li>
+        <li><b>30%</b> Before delivery of final drawings and documentation</li>
+      </ul>
+      <h4>Optional · Rendered Lighting Simulation</h4>
+      <ul>
+        <li><b>+ $</b> Photorealistic visualization of representative spaces, before installation — <em>placeholder amount</em></li>
+      </ul>
+      <div class="addr">
+        <div class="h">Proposal to be addressed to</div>
+        <p><b>Tropic Estate Land Trust</b><br>c/o David Weise &amp; Associates<br>15821 Ventura Blvd., Ste 370<br>Encino, CA 91436</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSE -->
+<section class="cta" id="contact">
+  <div class="kicker rv">The Beginning of a Conversation</div>
+  <h2 class="rv d1">Every room he's ever been in had an <span class="it">audience.</span><br>This one won't.</h2>
+  <p class="line rv d2">We'd be honored to design this alongside Studio Valle de Valle. <span class="em">We don't pitch — we partner.</span> You've spent months understanding who this house is for. We've spent every day since you reached out doing the same — studying the materials, the rooms, the person who'll live here, as closely as we could. And if we do our work right, no one who lives here will ever think about the lighting at all. They'll just never want to leave the room.</p>
+  <a href="https://www.kmlightingstudio.com" class="btn rv d2">Start the conversation +</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="foot-top">
+    <div class="foot-col">
+      <h4>Proposal</h4>
+      <a href="#approach">The Approach</a>
+      <a href="#craft">Our Craft</a>
+      <a href="#work">Selected Work</a>
+      <a href="#investment">Investment</a>
+    </div>
+    <div class="foot-col">
+      <h4>Studio</h4>
+      <p>Lima — HQ</p>
+      <p>Miami</p>
+      <p>Madrid</p>
+    </div>
+    <div class="foot-col">
+      <h4>Contact</h4>
+      <a href="https://www.kmlightingstudio.com">kmlightingstudio.com</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+    </div>
+    <div class="foot-col">
+      <h4>Project</h4>
+      <p>41 Arvida · Gables Estates</p>
+      <p>Coral Gables · Florida</p>
+      <p>with Studio Valle de Valle</p>
+      <p>Confidential · 2026</p>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <span class="big">KAREN MANNHEIM<small>LIGHTING STUDIO</small></span>
+    <span>© 2026 · Lighting Design Studio · Lima · Miami · Madrid</span>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-hidden="true">
+  <button class="lb-close" id="lbClose">Close ✕</button>
+  <div class="lb-inner">
+    <div class="lb-gallery">
+      <div class="lb-stage" id="lbStage">
+        <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+        <button class="lb-nav lb-next" id="lbNext" aria-label="Next">›</button>
+      </div>
+      <div class="lb-foot">
+        <div class="lb-thumbs" id="lbThumbs"></div>
+        <div class="lb-count" id="lbCount"></div>
+      </div>
+    </div>
+    <aside class="lb-info">
+      <div class="c" id="lbCat"></div>
+      <h3 id="lbTitle"></h3>
+      <div class="loc" id="lbLoc"></div>
+      <div class="lb-block"><h4 id="lbLab1">The Challenge</h4><p id="lbChallenge"></p></div>
+      <div class="lb-block"><h4 id="lbLab2">Our Approach</h4><p id="lbSolution"></p></div>
+    </aside>
+  </div>
+</div>
+
+<script>
+  const prog=document.getElementById('progress');
+  const onScroll=()=>{const h=document.documentElement;const max=h.scrollHeight-h.clientHeight;prog.style.width=(max>0?(h.scrollTop/max*100):0)+'%';};
+  document.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  const btns=document.querySelectorAll('.typo button');
+  const cards=document.querySelectorAll('#grid .card');
+  btns.forEach(b=>b.addEventListener('click',()=>{
+    btns.forEach(x=>x.classList.remove('on'));b.classList.add('on');
+    const f=b.dataset.f;
+    cards.forEach(c=>{c.style.display=(f==='all'||c.dataset.c===f)?'':'none';});
+  }));
+
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+  // ===== PROJECT CASE STUDIES =====
+  // Photos: assets/<slug>/1.jpg … 6.jpg (1.jpg = card cover). Edit copy in PROJECTS below.
+  let curMax=4;
+  const PROJECTS={
+    neymar:{cat:'Private Residence · Confidential',title:'Neymar Jr.',loc:'In design · 2026',photos:6,
+      challenge:'A home for one of the most recognised athletes on earth — a life lived in public, and the need for one place that is entirely private.',
+      solution:'Layered, fully dimmable light that turns from social to intimate in a single tap. A sanctuary, engineered around how he actually lives.'},
+    gustavo:{cat:'Private Residence · Confidential',title:'Gusttavo Lima',loc:'In design · 2026',photos:5,
+      challenge:'An artist who performs to stadiums wanted a residence that does the exact opposite: warm, quiet, unmistakably his own.',
+      solution:'Scene-based light tuned from family mornings to late nights — where the architecture leads and the fixtures disappear.'},
+    yacht:{cat:'Private Asset · Marine',title:'Superyacht',loc:'Confidential',photos:4,
+      challenge:'Lighting at sea — vibration, salt, low ceilings, and the expectation of a five-star suite in every cabin.',
+      solution:'Marine-rated, low-glare layers calibrated for movement, intimacy and long nights on the water.'},
+    jet:{cat:'Private Asset · Aviation',title:'Private Jet',loc:'Confidential',photos:4,
+      challenge:'A cabin that has to feel like a private lounge at 40,000 feet, within strict weight and certification limits.',
+      solution:'Tuned, circadian-aware light that softens travel and makes the cabin feel like an extension of home.'},
+    saadiyat:{cat:'Cultural · Venue',title:'Saadiyat Nights',loc:'Abu Dhabi',photos:5,video:'assets/saadiyat/video.mp4',
+      challenge:'A 2,000-seat open-air venue hosting the biggest voices in the world — J.Lo, John Mayer, Andrea Bocelli, Lewis Capaldi, Sting, Mariah Carey.',
+      solution:'A venue-wide lighting installation — not the stage — that turned the entire site into the experience, night after night.'},
+    collector:{cat:'Residential · Private Collection',title:'A Private Art Collector\'s Residence',loc:'Confidential',photos:6,
+      challenge:'A home built around a serious art collection, where the work has to lead and the architecture has to recede.',
+      solution:'Gallery-grade, low-UV light and deliberate pools of shadow that let each piece hold the room — the way a collector actually wants to live with art.'},
+    palmbeach:{cat:'Residential · Wecselman Design',title:'A Palm Beach Residence',loc:'Palm Beach',photos:5,
+      challenge:'A private waterfront residence with Wecselman Design, where the interior palette had to stay the hero.',
+      solution:'Warm, restrained light that honours the materials and lets the Florida light carry the day.'},
+    pezet3:{cat:'Residential · RAMSA',title:'Pezet 3',loc:'Lima',photos:6,
+      challenge:'The third tower in a decade-long collaboration with Robert A.M. Stern Architects — timeless, never trendy.',
+      solution:'An architectural lighting language carried across all three towers; its reveal reached 80,000 views and brought a new penthouse client.'},
+    moraleja:{cat:'Residential · MORPH Studio',title:'La Moraleja Residence',loc:'Madrid',photos:5,
+      challenge:'A contemporary residence with one of the world\'s top-100 architecture firms.',
+      solution:'Restrained, architectural light that lets clean lines and the connection to the garden lead.'},
+    mariana:{cat:'Residential · Private',title:'A Private Apartment',loc:'Confidential',photos:4,
+      challenge:'Placeholder — add the challenge for this project.',
+      solution:'Placeholder — add the lighting approach for this project.'},
+    kathy:{cat:'Residential · Private',title:'A Private Family Residence',loc:'Confidential',photos:4,
+      challenge:'Placeholder — add the challenge for this project.',
+      solution:'Placeholder — add the lighting approach for this project.'},
+    vivagym:{cat:'Commercial · Wellness',title:'Viva Gym Building',loc:'—',photos:4,
+      challenge:'A wellness brand that lives or dies by how the space makes the body feel.',
+      solution:'Energising by day, calming by night — light tuned to the body\'s own clock.'},
+    blascerdena:{cat:'Multifamily · RAMSA',title:'Blas Cerdeña',loc:'Lima',photos:5,
+      challenge:'A high-end multifamily tower with RAMSA, from lobby to penthouse.',
+      solution:'A single, cohesive lighting identity that makes every shared space feel considered.'},
+    poseidon:{cat:'Residential · Beachfront',title:'Poseidón Beach House',loc:'Lima',photos:5,
+      challenge:'A contemporary beach house facing the Pacific, where glare and salt are constant.',
+      solution:'Warm, low, salt-resistant light that extends the golden hour indoors.'},
+    fisher:{cat:'Residential · Adriana Hoyos',title:'Fisher Island Apartment',loc:'Miami',photos:5,
+      challenge:'A private apartment in the most exclusive zip code in the United States.',
+      solution:'Gallery-grade, restrained light that lets material and water views carry the space.'},
+    golden:{cat:'Residential · Oppenheim Architecture',title:'A Private Residence',loc:'Golden Beach',photos:6,
+      challenge:'A waterfront residence with Oppenheim Architecture, open to the water on every side.',
+      solution:'Architectural light that dissolves the line between inside and the bay beyond.'},
+    'stage-1':{cat:'Scope of Work · Stage 1',title:'Lighting Design',loc:'Contractual stage · 1 of 3',labels:['Scope of work','Deliverables · final dossier'],nogallery:true,
+      challenge:'<ul><li><b>Site assessment &amp; briefing</b> — initial information and project requirements</li><li><b>Lighting concept &amp; strategy</b> — general concept with a complete moodboard per space</li><li><b>Lighting design</b> — fixture selection &amp; placement: plans, legend with symbols &amp; nomenclature, specbook per fixture</li><li><b>Lighting control system</b> — switching plan and keypad distribution drawings</li><li><b>Photometric calculations</b> — Dialux with real photometry</li><li><b>Coordination</b> with architecture, interior design and other technical trades</li></ul>',
+      solution:'<ul><li>AutoCAD construction drawings — dimensions, annotations, low-voltage wiring, panel locations &amp; outlets</li><li>Complete specification legend for each fixture</li><li>Reference construction &amp; installation details</li><li>Complete specbook for each selected fixture</li><li>Photorealistic 3D views per space showing the lighting layers</li></ul>'},
+    'stage-2':{cat:'Scope of Work · Stage 2',title:'Lighting Design Management',loc:'Contractual stage · 2 of 3',labels:['What it includes',''],nogallery:true,
+      challenge:'<ul><li>Coordination meetings</li><li>Change management — drawing modifications &amp; updates</li><li>Support during construction</li><li>Scene calibration &amp; light testing</li></ul>',
+      solution:''},
+    'stage-3':{cat:'Scope of Work · Stage 3',title:'On-Site Management',loc:'Contractual stage · 3 of 3',labels:['What it includes',''],nogallery:true,
+      challenge:'<ul><li>Site visits at key milestones</li><li>Supervision reports</li><li>Resolution of technical queries</li><li>Design adjustments per construction needs</li><li>Light testing to verify correct installation</li></ul>',
+      solution:''}
+  };
+  const lb=document.getElementById('lb'),lbStage=document.getElementById('lbStage'),
+        lbThumbs=document.getElementById('lbThumbs'),lbCount=document.getElementById('lbCount'),
+        lbCat=document.getElementById('lbCat'),lbTitle=document.getElementById('lbTitle'),lbLoc=document.getElementById('lbLoc'),
+        lbCh=document.getElementById('lbChallenge'),lbSo=document.getElementById('lbSolution'),
+        lbLab1=document.getElementById('lbLab1'),lbLab2=document.getElementById('lbLab2');
+  let cur=0,slides=[],thumbs=[];
+
+  function openLB(id){
+    const p=PROJECTS[id];if(!p)return;
+    lbCat.textContent=p.cat;lbTitle.textContent=p.title;lbLoc.textContent=p.loc;
+    lbLab1.textContent=(p.labels&&p.labels[0])||'The Challenge';
+    lbLab2.textContent=(p.labels&&p.labels[1])||'Our Approach';
+    lbCh.innerHTML=p.challenge||'';lbSo.innerHTML=p.solution||'';
+    lbLab2.closest('.lb-block').style.display=p.solution?'':'none';
+    lbStage.querySelectorAll('.slide').forEach(n=>n.remove());lbThumbs.innerHTML='';
+    slides=[];thumbs=[];
+    const noimg=!!p.nogallery;
+    lb.classList.toggle('lb-noimg',noimg);
+    if(!noimg){
+      // Optional video as first slide (e.g. Saadiyat). Set `video:'assets/<id>/video.mp4'` on the project.
+      if(p.video){
+        const vs=document.createElement('div');vs.className='slide';
+        vs.innerHTML='<video src="'+p.video+'" controls playsinline preload="metadata" poster="assets/'+id+'/1.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000"></video>';
+        lbStage.appendChild(vs);slides.push(vs);
+        const vt=document.createElement('div');vt.className='th th-video';
+        vt.innerHTML='<div class="ph"></div><img src="assets/'+id+'/1.jpg" alt="" onerror="this.remove()"><span class="play">▶</span>';
+        vt.addEventListener('click',()=>go(0));lbThumbs.appendChild(vt);thumbs.push(vt);
+      }
+      // Per-project photo count (default 4). Set `photos:N` on the project to override.
+      const n=p.photos||4;
+      for(let i=1;i<=n;i++){
+        const s=document.createElement('div');s.className='slide';
+        s.innerHTML='<div class="ph" data-label="Photo '+i+' of '+n+' — replace"></div><img src="assets/'+id+'/'+i+'.jpg" alt="" onerror="this.remove()">';
+        lbStage.appendChild(s);slides.push(s);
+        const t=document.createElement('div');t.className='th';
+        t.innerHTML='<div class="ph"></div><img src="assets/'+id+'/'+i+'.jpg" alt="" onerror="this.remove()">';
+        t.addEventListener('click',()=>go(slides.indexOf(s)));lbThumbs.appendChild(t);thumbs.push(t);
+      }
+    }
+    curMax=slides.length;cur=0;
+    if(curMax){render();}else{lbCount.textContent='';}
+    lb.classList.add('open');lb.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
+  }
+  function render(){slides.forEach((s,i)=>s.classList.toggle('on',i===cur));thumbs.forEach((t,i)=>t.classList.toggle('on',i===cur));lbCount.textContent=(cur+1)+' / '+curMax;
+    // pause any video when leaving its slide
+    slides.forEach((s,i)=>{const v=s.querySelector('video');if(v&&i!==cur)v.pause();});}
+  function go(i){if(!curMax)return;cur=(i+curMax)%curMax;render();}
+  function closeLB(){lb.classList.remove('open');lb.setAttribute('aria-hidden','true');document.body.style.overflow='';
+    slides.forEach(s=>{const v=s.querySelector('video');if(v)v.pause();});}
+
+  document.querySelectorAll('[data-project]').forEach(el=>el.addEventListener('click',()=>openLB(el.dataset.project)));
+  document.getElementById('lbClose').addEventListener('click',closeLB);
+  document.getElementById('lbPrev').addEventListener('click',()=>go(cur-1));
+  document.getElementById('lbNext').addEventListener('click',()=>go(cur+1));
+  lb.addEventListener('click',e=>{if(e.target===lb)closeLB();});
+  document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')closeLB();if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1);});
+</script>
+</body>
+</html>
