@@ -50,7 +50,7 @@
 
   .sx{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--bronce-deep)}
   .kicker{font-family:var(--display);font-size:11.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--bronce-deep)}
-  em.it,.it{font-family:var(--serif);font-style:italic;font-weight:300;text-transform:none;letter-spacing:-.01em;color:var(--bronce-deep)}
+  em.it,.it{font-family:var(--display);font-style:normal;font-weight:700;text-transform:none;letter-spacing:-.01em;color:var(--bronce-deep)}
 
   .rv{opacity:0;transform:translateY(26px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
   .rv.in{opacity:1;transform:none}
@@ -301,7 +301,7 @@
   .cta h2{font-family:var(--display);font-weight:800;font-size:clamp(32px,5.6vw,84px);letter-spacing:-.03em;line-height:.98;text-transform:uppercase}
   .cta h2 .it{color:var(--bronce-light)}
   .cta .line{margin:30px auto 0;max-width:48ch;font-size:clamp(15px,1.4vw,18px);line-height:1.7;color:rgba(244,241,234,.78)}
-  .cta .line .em{color:var(--bronce-light);font-family:var(--serif);font-style:italic;font-weight:300}
+  .cta .line .em{color:var(--bronce-light);font-family:var(--display);font-style:normal;font-weight:700}
   .cta a.btn{display:inline-block;margin-top:42px;font-family:var(--display);font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;background:var(--cal);color:var(--tinta);padding:16px 34px;border-radius:40px;transition:.25s}
   .cta a.btn:hover{background:var(--bronce);color:#fff}
   .foot{background:var(--tinta);color:var(--cal);padding:0 var(--pad) 44px}
@@ -352,7 +352,20 @@
   @media(max-width:900px){.work-head,.sec-head{flex-wrap:wrap}.work .side,.scope .note{margin-left:0}.lb-inner{grid-template-columns:1fr;height:auto}.lb{overflow-y:auto}.lb-stage{height:52vh}.lb-info .c{margin-top:18px}}
 
   /* SHARED LANGUAGE sign-off line */
-  .philo .signoff-line{margin-top:24px;font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(17px,1.6vw,22px);line-height:1.4;color:var(--bronce-light)}
+  .philo .signoff-line{margin-top:24px;font-family:var(--display);font-style:normal;font-weight:600;font-size:clamp(16px,1.45vw,21px);line-height:1.45;color:var(--bronce-light)}
+
+  /* TECHNOLOGY */
+  .tech{border-top:1px solid var(--line)}
+  .tech .tgrid2{margin-top:clamp(40px,6vh,72px);display:grid;grid-template-columns:1fr 1.04fr;gap:clamp(34px,5vw,72px);align-items:center}
+  .tbeat+.tbeat{margin-top:32px;padding-top:32px;border-top:1px solid var(--line-soft)}
+  .tbeat .te{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--bronce-deep)}
+  .tbeat h3{font-family:var(--display);font-weight:700;font-size:clamp(20px,2vw,28px);letter-spacing:-.02em;margin-top:10px;line-height:1.1}
+  .tbeat p{margin-top:12px;font-size:clamp(14px,1.15vw,16px);line-height:1.7;color:var(--tinta-soft);max-width:48ch}
+  .tech .graphcard{background:var(--cal-warm);border:1px solid var(--line);padding:clamp(22px,2.6vw,36px)}
+  .tech .graphcard .gh{font-family:var(--display);font-weight:700;font-size:clamp(16px,1.5vw,21px);letter-spacing:-.01em;margin-bottom:14px}
+  .tech .graphcard svg{width:100%;height:auto;display:block}
+  .tech .foot-tech{margin-top:clamp(30px,4vh,48px);font-size:12.5px;color:var(--tinta-mute)}
+  @media(max-width:840px){.tech .tgrid2{grid-template-columns:1fr;gap:34px}}
 
   /* SCOPE STAGES (zigzag, cream) */
   .stages-head{padding:clamp(80px,12vh,150px) var(--pad) 0;border-top:1px solid var(--line)}
@@ -372,10 +385,23 @@
   .stage.rev .txt{order:2}
   .stage.alt{background:var(--cal-warm)}
   .vflag{display:inline;font-family:var(--display);font-style:normal;font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--bronce);background:rgba(154,132,99,.12);padding:1px 7px;border-radius:20px;white-space:nowrap}
-  .scope-addon{padding:0 var(--pad) clamp(70px,10vh,120px);max-width:none}
-  .scope-addon .box{border:1px dashed var(--line);padding:24px 28px;background:var(--cal-warm)}
-  .scope-addon .box b{font-family:var(--display);text-transform:uppercase;letter-spacing:.08em;font-size:13px}
-  .scope-addon .box span{color:var(--tinta-soft);font-size:14.5px}
+  /* WHAT WE DO */
+  .wstages{margin-top:clamp(36px,5vh,60px);display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+  .wstage{background:var(--cal);padding:clamp(24px,3vw,38px);display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,54px);align-items:baseline;transition:background .25s}
+  .wstage:hover{background:var(--cal-warm)}
+  .wstage .st{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--bronce-deep);white-space:nowrap}
+  .wstage h3{font-family:var(--display);font-weight:700;font-size:clamp(18px,1.7vw,23px);letter-spacing:-.01em;text-transform:uppercase}
+  .wstage p{font-size:clamp(14px,1.15vw,16px);line-height:1.65;color:var(--tinta-soft);margin-top:8px;max-width:64ch}
+  @media(max-width:640px){.wstage{grid-template-columns:1fr;gap:10px}}
+  /* WHAT YOU RECEIVE */
+  .receive{border-top:1px solid var(--line)}
+  .rgroups{margin-top:clamp(36px,5vh,60px);display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .rgroup{background:var(--cal);padding:clamp(24px,2.6vw,34px)}
+  .rgroup h4{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--bronce-deep);margin-bottom:16px}
+  .rgroup ul{list-style:none}
+  .rgroup li{position:relative;font-size:13.5px;line-height:1.5;color:var(--tinta-soft);padding-left:16px;margin-bottom:11px}
+  .rgroup li::before{content:'';position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--bronce)}
+  @media(max-width:760px){.rgroups{grid-template-columns:1fr}}
   @media(max-width:840px){.stage{grid-template-columns:1fr;gap:26px}.stage.rev .txt{order:0}}
 
   /* COORDINATION */
@@ -384,7 +410,7 @@
   .copt{background:var(--cal);padding:34px 30px}
   .copt h3{font-family:var(--display);font-weight:700;font-size:clamp(17px,1.6vw,20px);text-transform:uppercase;letter-spacing:-.01em}
   .copt p{margin-top:12px;font-size:14.5px;line-height:1.62;color:var(--tinta-soft)}
-  .coord .close-line{margin-top:40px;font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(18px,1.8vw,26px);color:var(--bronce-deep);line-height:1.3}
+  .coord .close-line{margin-top:40px;font-family:var(--display);font-style:normal;font-weight:600;font-size:clamp(17px,1.6vw,23px);color:var(--bronce-deep);line-height:1.35}
   @media(max-width:760px){.cograd{grid-template-columns:1fr}}
 
   /* ROOMS COMPACT */
@@ -458,11 +484,11 @@
 <section class="sec invite" id="invite">
   <div class="l rv">
     <div class="sx" style="margin-bottom:24px">01 — The Invitation</div>
-    <h2>A single role,<span class="it">done precisely.</span></h2>
+    <h2>A single role, <span class="it">done precisely.</span></h2>
   </div>
   <div class="r rv d1">
-    <p>Studio Valle de Valle is reimagining the interiors of 41 Arvida. We were invited to design the light that lives inside them — and our role is singular: to reveal what you've specified, never to compete with it.</p>
-    <p>What follows is how we read the house, the work behind us, and exactly what we deliver — in coordination with your team, at every stage.</p>
+    <p>Studio Valle de Valle is reimagining the interiors of 41 Arvida. We were invited to design the light that lives inside them — and our role is singular: to serve what you're building, never to compete with it. You shape how the house looks. We make sure the light agrees.</p>
+    <p>What follows is how we work, the studios we've done it alongside, and exactly what we deliver — inside your process, at every stage.</p>
     <span class="tag">Scope · Renovated interiors · with Studio Valle de Valle</span>
   </div>
 </section>
@@ -473,52 +499,60 @@
   <div class="inner rv">
     <div class="kicker">02 — A Shared Language</div>
     <div class="philo-grid">
-      <h2>We light in a grammar you already <span class="it">read.</span></h2>
+      <h2>You design the room. We design <span class="it">how its light behaves.</span></h2>
       <div>
-        <p class="body">The person who'll live here thinks in frames — the controlled dark of Kubrick, the low glow of Lynch. Light that withholds as much as it reveals. That isn't a mood board for us; it's how we already work: single intentional sources, gallery-grade restraint, deliberate shadow.</p>
-        <p class="signoff-line">The studio that knows when <em>not</em> to add light is the one that understands it.</p>
+        <p class="body">Your work speaks in plaster, iroko, microcement — surfaces that hold light instead of bouncing it, warmth that never announces itself. That's the grammar we light in too. No flood, no glare, no fixture competing with the architecture. The light serves the room you've drawn, and stays quiet about how.</p>
+        <p class="signoff-line">The hardest light to engineer is the light you <span class="it">never notice.</span></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 03 READING ARVIDA 01 -->
-<section class="reading rev" id="material">
-  <div class="img"><img class="pmax" src="assets/arvida/material.jpg" alt="" onerror="this.remove()"><div class="ph" data-label="Material — plaster · iroko · microcement · felt"></div></div>
-  <div class="txt rv">
-    <div class="kicker">Reading Arvida — 01</div>
-    <h2>Material first.</h2>
-    <p class="body">Plaster, iroko, microcement, felt — surfaces chosen for texture, not shine. They don't reflect light; they hold it. Our work is to let each material reveal what it already is.</p>
-    <div class="signoff">Light as a way of seeing the craft — not hiding it.</div>
-  </div>
-</section>
-
-<!-- 04 READING ARVIDA 02 -->
-<section class="reading" id="musician">
-  <div class="img"><img class="pmax" src="assets/arvida/mood.jpg" alt="" onerror="this.remove()"><div class="ph" data-label="Mood — booth · screening · studio"></div></div>
-  <div class="txt rv">
-    <div class="kicker">Reading Arvida — 02</div>
-    <h2>The screening room is the heart, not an amenity.</h2>
-    <p class="body">In most homes the cinema is a feature. Here it's the center of gravity — the room a film lover actually lives toward. So we treat the whole house with a director's logic: light built in scenes, not switches. Pools of warmth and deliberate dark. The dome above the stair that stays dark on purpose, so the glow below feels warmer. A home where atmosphere is composed, the way a scene is — and where, when the lights go down, nothing pulls your eye away from the screen.</p>
-    <div class="signoff">Lit the way a film is graded — for feeling, not for brightness.</div>
-  </div>
-</section>
-
-<!-- 05 OUR CRAFT -->
-<section class="sec craft" id="craft">
+<!-- 03 THE TECHNOLOGY -->
+<section class="sec tech" id="technology">
   <div class="work-head">
     <div class="rv">
-      <div class="sx" style="margin-bottom:18px">03 — Our Craft</div>
-      <h2 class="big">How we light<br>what you're <span class="it">building</span></h2>
+      <div class="sx" style="margin-bottom:18px">03 — The Technology</div>
+      <h2 class="big">You design the room.<br>We make the light <span class="it">disappear into it.</span></h2>
     </div>
-    <div class="note rv d1">Four materials, four decisions. This is the difference between a lighting plan and a room you don't want to leave.</div>
+    <div class="note rv d1">The light you've imagined for this house is warm, quiet, and almost invisible — the kind that feels like it was always there. That's the hardest kind to engineer. It takes more control, not less, to make light this calm. This is the part of the house that runs underneath everything you've drawn.</div>
   </div>
-  <div class="cgrid">
-    <div class="cmat rv"><div class="pic"><img src="assets/arvida/plaster.jpg" alt="" onerror="this.remove()"><div class="ph" data-label="Plaster"></div></div><div><div class="nm">Plaster</div><p>Curved, hand-finished, no shine to hide behind. Grazing light only — a low raking wash along the curve, so the spiral stair reads as texture, not surface. The dome above stays dark on purpose: a pool of shadow that makes the warmth below feel warmer.</p><div class="signoff">The quiet drama of the stair.</div></div></div>
-    <div class="cmat rv d1"><div class="pic"><img src="assets/arvida/wood.jpg" alt="" onerror="this.remove()"><div class="ph" data-label="Iroko & teak"></div></div><div><div class="nm">Wood — iroko &amp; teak</div><p>Warm, directional, full of grain. Tight accents raked across the figure, color temperature held golden. Never flooded — the grain reads as depth, not gloss.</p><div class="signoff">Lit from within, not spotlit from above.</div></div></div>
-    <div class="cmat rv"><div class="pic"><img src="assets/arvida/microcement.jpg" alt="" onerror="this.remove()"><div class="ph" data-label="Microcement"></div></div><div><div class="nm">Microcement</div><p>Soft, matte, seamless — almost no reflectance. One well-placed source, grazing or concealed, over many. Restraint keeps the surface continuous.</p><div class="signoff">Less light, better placed.</div></div></div>
-    <div class="cmat rv d1"><div class="pic"><img src="assets/arvida/felt.jpg" alt="" onerror="this.remove()"><div class="ph" data-label="Acoustic felt"></div></div><div><div class="nm">Acoustic felt</div><p>Absorbs sound and light alike. Indirect, warm, layered low — never aimed at the panels. The surface stays matte, the room closes in around you.</p><div class="signoff">Light you sit inside, not under.</div></div></div>
+  <div class="tgrid2">
+    <div class="rv">
+      <div class="tbeat">
+        <div class="te">01 · The light</div>
+        <h3>A light that dims like a candle.</h3>
+        <p>A standard LED holds the same cold tone all the way down — flat and clinical at the bottom of the dial. The light we specify does the opposite: as it lowers, it warms. From a clean working white to the amber of a flame, the way daylight fades at dusk. On plaster, iroko and microcement, that warmth is everything — it lets your materials hold the light instead of bouncing it back.</p>
+      </div>
+      <div class="tbeat">
+        <div class="te">02 · The system</div>
+        <h3>A house that keeps time with the sun.</h3>
+        <p>The light shifts through the day on its own — cool and awake in the morning, low and golden by night — tracking the sun by the home's own position. No wall of switches to read, nothing to program by hand, no cold blue glow at midnight. The house simply knows what the hour asks for. Artificial light that behaves like the window beside it.</p>
+      </div>
+    </div>
+    <div class="graphcard rv d1">
+      <div class="gh">It dims like a candle, not a screen.</div>
+      <svg viewBox="0 0 500 304" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Warm-dim color temperature curve: as light dims it warms from 3000K to 1800K, while a standard LED stays cold.">
+        <line x1="70" y1="34" x2="70" y2="240" style="stroke:var(--tinta);stroke-width:1"/>
+        <line x1="70" y1="240" x2="478" y2="240" style="stroke:var(--tinta);stroke-width:1"/>
+        <text x="62" y="40" text-anchor="end" style="font-family:var(--display);font-size:10px;fill:var(--tinta-mute)">3000K</text>
+        <text x="62" y="238" text-anchor="end" style="font-family:var(--display);font-size:10px;fill:var(--tinta-mute)">1800K</text>
+        <line x1="70" y1="50" x2="478" y2="50" style="stroke:var(--line);stroke-width:2"/>
+        <text x="478" y="44" text-anchor="end" style="font-family:var(--display);font-size:9.5px;font-weight:600;letter-spacing:.04em;fill:var(--tinta-mute)">STANDARD LED — STAYS COLD</text>
+        <path d="M70,62 Q262,150 478,208" fill="none" style="stroke:var(--tinta-mute);stroke-width:1.3;stroke-dasharray:4 4"/>
+        <text x="300" y="146" style="font-family:var(--display);font-size:9.5px;fill:var(--tinta-mute)">Halogen (reference)</text>
+        <path d="M70,50 Q236,160 478,226" fill="none" style="stroke:var(--bronce-deep);stroke-width:3;stroke-linecap:round"/>
+        <text x="352" y="214" style="font-family:var(--display);font-size:11px;font-weight:700;letter-spacing:.02em;fill:var(--bronce-deep)">WARM-DIM</text>
+        <text x="70" y="258" style="font-family:var(--display);font-size:9.5px;font-weight:600;letter-spacing:.04em;fill:var(--tinta-mute)">FULL OUTPUT</text>
+        <text x="478" y="258" text-anchor="end" style="font-family:var(--display);font-size:9.5px;font-weight:600;letter-spacing:.04em;fill:var(--tinta-mute)">DIMMED TO 1%</text>
+        <defs><linearGradient id="kgrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#efe6d4"/><stop offset="1" stop-color="#d99748"/></linearGradient></defs>
+        <rect x="70" y="274" width="408" height="9" rx="1" fill="url(#kgrad)"/>
+        <text x="70" y="298" style="font-family:var(--display);font-size:9px;letter-spacing:.04em;fill:var(--tinta-mute)">3000K · CLEAN WHITE</text>
+        <text x="478" y="298" text-anchor="end" style="font-family:var(--display);font-size:9px;letter-spacing:.04em;fill:var(--tinta-mute)">1800K · CANDLELIGHT</text>
+      </svg>
+    </div>
   </div>
+  <div class="foot-tech rv">Engineered on Lutron HomeWorks &amp; Ketra — the reference standard for light that moves with the day.</div>
 </section>
 
 <!-- 07 WE'VE DONE THIS BEFORE -->
@@ -528,7 +562,7 @@
       <div class="sx" style="margin-bottom:18px">04 — The Company We Keep</div>
       <h2 class="big">We've done<br>this <span class="it">before</span></h2>
     </div>
-    <div class="side rv d1">We light homes for people the world recognizes and rarely gets to see inside. The discretion is the point — we speak this language fluently, and we keep it to ourselves. The stakes here are familiar to us.</div>
+    <div class="side rv d1">We light homes for people the world recognizes and rarely gets to see inside. The discretion is the point — we speak this language fluently, and we keep it to ourselves. The stakes here are familiar to us, and so is working beside a studio that holds them to your standard.</div>
   </div>
 
   <div class="feat-label rv d1"><span class="t">Currently in design</span><span class="ln"></span></div>
@@ -565,111 +599,85 @@
     <article class="card rv" data-c="res" data-project="palmbeach"><div class="imgw"><img src="assets/palmbeach/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Palm Beach residence"></div><span class="num">02</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Wecselman Design</div><h3>A Palm Beach Residence</h3><div class="loc">Palm Beach</div></div></article>
     <article class="card rv" data-c="res" data-project="pezet3"><div class="imgw"><img src="assets/pezet3/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Pezet 3"></div><span class="num">03</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · RAMSA</div><h3>Pezet 3</h3><div class="loc">Lima</div></div></article>
     <article class="card rv" data-c="res" data-project="moraleja"><div class="imgw"><img src="assets/moraleja/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="La Moraleja"></div><span class="num">04</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · MORPH Studio</div><h3>La Moraleja Residence</h3><div class="loc">Madrid</div></div></article>
-    <article class="card rv" data-c="res" data-project="residence-2"><div class="imgw"><img src="assets/residence-2/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Private apartment"></div><span class="num">05</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Private</div><h3>A Private Apartment</h3><div class="loc">Confidential</div></div></article>
-    <article class="card rv" data-c="res" data-project="residence-1"><div class="imgw"><img src="assets/residence-1/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Private family residence"></div><span class="num">06</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Private</div><h3>A Private Family Residence</h3><div class="loc">Confidential</div></div></article>
-    <article class="card rv" data-c="comm" data-project="vivagym"><div class="imgw"><img src="assets/vivagym/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Viva Gym"></div><span class="num">07</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Commercial · Wellness</div><h3>Viva Gym Building</h3><div class="loc">—</div></div></article>
-    <article class="card rv" data-c="multi" data-project="blascerdena"><div class="imgw"><img src="assets/blascerdena/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Blas Cerdeña"></div><span class="num">08</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Multifamily · RAMSA</div><h3>Blas Cerdeña</h3><div class="loc">Lima</div></div></article>
-    <article class="card rv" data-c="res" data-project="poseidon"><div class="imgw"><img src="assets/poseidon/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Poseidón beach house"></div><span class="num">09</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Beachfront</div><h3>Poseidón Beach House</h3><div class="loc">Lima</div></div></article>
-    <article class="card rv" data-c="res" data-project="fisher"><div class="imgw"><img src="assets/fisher/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Fisher Island"></div><span class="num">10</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Adriana Hoyos</div><h3>Fisher Island Apartment</h3><div class="loc">Miami</div></div></article>
-    <article class="card rv" data-c="res" data-project="golden"><div class="imgw"><img src="assets/golden/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Golden Beach residence"></div><span class="num">11</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Oppenheim Architecture</div><h3>A Private Residence</h3><div class="loc">Golden Beach</div></div></article>
-    <article class="card rv" data-c="res" data-project="fourseasons"><div class="imgw"><img src="assets/fourseasons/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Four Seasons"></div><span class="num">12</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Adriana Hoyos</div><h3>Four Seasons Penthouse</h3><div class="loc">Brickell · Miami</div></div></article>
-    <article class="card rv" data-c="res" data-project="keybiscayne"><div class="imgw"><img src="assets/keybiscayne/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Key Biscayne"></div><span class="num">13</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Waterfront</div><h3>Key Biscayne Villa</h3><div class="loc">Key Biscayne · Miami</div></div></article>
-    <article class="card rv" data-c="res" data-project="pezet1"><div class="imgw"><img src="assets/pezet1/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Pezet 1"></div><span class="num">14</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · RAMSA</div><h3>Pezet 1</h3><div class="loc">Lima</div></div></article>
-    <article class="card rv" data-c="res" data-project="pezet2"><div class="imgw"><img src="assets/pezet2/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Pezet 2"></div><span class="num">15</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · RAMSA</div><h3>Pezet 2</h3><div class="loc">Lima</div></div></article>
-    <article class="card rv" data-c="res" data-project="privatevilla"><div class="imgw"><img src="assets/privatevilla/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Private villa"></div><span class="num">16</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Private</div><h3>A Private Villa</h3><div class="loc">Confidential</div></div></article>
+    <article class="card rv" data-c="comm" data-project="vivagym"><div class="imgw"><img src="assets/vivagym/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Viva Gym"></div><span class="num">05</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Commercial · Wellness</div><h3>Viva Gym Building</h3><div class="loc">—</div></div></article>
+    <article class="card rv" data-c="multi" data-project="blascerdena"><div class="imgw"><img src="assets/blascerdena/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Blas Cerdeña"></div><span class="num">06</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Multifamily · RAMSA</div><h3>Blas Cerdeña</h3><div class="loc">Lima</div></div></article>
+    <article class="card rv" data-c="res" data-project="poseidon"><div class="imgw"><img src="assets/poseidon/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Poseidón beach house"></div><span class="num">07</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Beachfront</div><h3>Poseidón Beach House</h3><div class="loc">Lima</div></div></article>
+    <article class="card rv" data-c="res" data-project="fisher"><div class="imgw"><img src="assets/fisher/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Fisher Island"></div><span class="num">08</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Adriana Hoyos</div><h3>Fisher Island Apartment</h3><div class="loc">Miami</div></div></article>
+    <article class="card rv" data-c="res" data-project="golden"><div class="imgw"><img src="assets/golden/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Golden Beach residence"></div><span class="num">09</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Oppenheim Architecture</div><h3>A Private Residence</h3><div class="loc">Golden Beach</div></div></article>
+    <article class="card rv" data-c="res" data-project="fourseasons"><div class="imgw"><img src="assets/fourseasons/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Four Seasons"></div><span class="num">10</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Adriana Hoyos</div><h3>Four Seasons Penthouse</h3><div class="loc">Brickell · Miami</div></div></article>
+    <article class="card rv" data-c="res" data-project="pezet1"><div class="imgw"><img src="assets/pezet1/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Pezet 1"></div><span class="num">11</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · RAMSA</div><h3>Pezet 1</h3><div class="loc">Lima</div></div></article>
+    <article class="card rv" data-c="res" data-project="pezet2"><div class="imgw"><img src="assets/pezet2/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Pezet 2"></div><span class="num">12</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · RAMSA</div><h3>Pezet 2</h3><div class="loc">Lima</div></div></article>
+    <article class="card rv" data-c="res" data-project="privatevilla"><div class="imgw"><img src="assets/privatevilla/1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Private villa"></div><span class="num">13</span><div class="ovl"><span>View gallery</span></div></div><div class="meta"><div class="c">Residential · Private</div><h3>A Private Villa</h3><div class="loc">Confidential</div></div></article>
   </div>
 </section>
 
-<!-- 09 SCOPE OF WORK -->
-<section class="sec scope" id="scope" style="padding-bottom:clamp(24px,4vh,48px)">
+<!-- 06 WHAT WE DO -->
+<section class="sec scope" id="scope">
   <div class="work-head">
     <div class="rv">
-      <div class="sx" style="margin-bottom:18px">06 — Scope of Work</div>
-      <h2 class="big">What we deliver,<br>stage by <span class="it">stage.</span></h2>
+      <div class="sx" style="margin-bottom:18px">06 — What we do</div>
+      <h2 class="big">Three stages,<br>one <span class="it">commitment.</span></h2>
     </div>
-    <div class="note rv d1">Three contractual stages, in coordination with Studio Valle de Valle. No ambiguity — each stage is a defined set of deliverables.</div>
+    <div class="note rv d1">We design the light, we protect it through construction, and we stay until it's right — in coordination with Studio Valle de Valle.</div>
+  </div>
+  <div class="wstages rv d1">
+    <div class="wstage"><div class="st">Stage 1</div><div><h3>Lighting Design</h3><p>The complete design intent for every renovated space: concept, fixtures, and the technical basis behind each decision.</p></div></div>
+    <div class="wstage"><div class="st">Stage 2</div><div><h3>Design Management</h3><p>We protect the design through construction, resolving every change before it reaches the wall.</p></div></div>
+    <div class="wstage"><div class="st">Stage 3</div><div><h3>On-Site</h3><p>Site visits, supervision and final commissioning. We don't leave until the light is exactly right.</p></div></div>
   </div>
 </section>
 
-<!-- STAGE 1 — Lighting Design (text left / photos right) -->
-<section class="stage rv">
-  <div class="txt">
-    <div class="st">Stage 1</div>
-    <h3>Lighting Design</h3>
-    <p class="what">The complete design intent for every renovated space — concept, fixtures, and the technical basis behind each decision.</p>
-    <h4>Deliverables</h4>
-    <ul>
-      <li>Lighting concept &amp; atmosphere, per space</li>
-      <li>Reflected ceiling plans (RCP) — fixture locations &amp; types</li>
-      <li>Fixture schedule &amp; specifications</li>
-      <li>Photometric calculations <span class="vflag">stage to confirm</span></li>
-      <li>Control-system strategy — scenes, zoning, dimming <span class="vflag">system to confirm</span></li>
-      <li>Full construction dossier</li>
-    </ul>
+<!-- 07 WHAT YOU RECEIVE -->
+<section class="sec receive" id="deliverables">
+  <div class="work-head">
+    <div class="rv">
+      <div class="sx" style="margin-bottom:18px">07 — What you receive</div>
+      <h2 class="big">Every drawing,<br>every <span class="it">stage.</span></h2>
+    </div>
+    <div class="note rv d1">The concrete set you can hold us to — grouped by stage, delivered inside your process.</div>
   </div>
-  <div class="shots">
-    <div class="s s1"><img class="pmax" src="assets/scope/stage1-1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="RCP / lighting plan"></div></div>
-    <div class="s s2"><img class="pmax" src="assets/scope/stage1-2.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Concept render"></div></div>
-    <div class="s s3"><img class="pmax" src="assets/scope/stage1-3.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Fixture schedule"></div></div>
+  <div class="rgroups rv d1">
+    <div class="rgroup">
+      <h4>From Stage 1</h4>
+      <ul>
+        <li>Lighting concept &amp; atmosphere, per space</li>
+        <li>Reflected ceiling plans (RCP) with fixture locations &amp; types</li>
+        <li>Fixture schedule &amp; specifications</li>
+        <li>Photometric calculations</li>
+        <li>Control-system strategy — scenes, zoning, dimming</li>
+        <li>Full construction dossier</li>
+      </ul>
+    </div>
+    <div class="rgroup">
+      <h4>From Stage 2</h4>
+      <ul>
+        <li>Coordination with architect, interior designer, AV &amp; structural consultants</li>
+        <li>Shop-drawing &amp; submittal review</li>
+        <li>Change management through construction</li>
+        <li>Scene-calibration planning</li>
+        <li>Delivery in your file standards</li>
+      </ul>
+    </div>
+    <div class="rgroup">
+      <h4>From Stage 3</h4>
+      <ul>
+        <li>Site visits &amp; installation supervision</li>
+        <li>Aiming, focusing &amp; light testing</li>
+        <li>Scene programming &amp; commissioning</li>
+        <li>Final walkthrough &amp; punch list</li>
+      </ul>
+    </div>
   </div>
-</section>
-
-<!-- STAGE 2 — Lighting Design Management (photos left / text right) -->
-<section class="stage rev alt rv">
-  <div class="txt">
-    <div class="st">Stage 2</div>
-    <h3>Lighting Design Management</h3>
-    <p class="what">We protect the design through construction — coordinating with your team and resolving every change before it reaches the wall.</p>
-    <h4>Deliverables</h4>
-    <ul>
-      <li>Coordination with architect, interior designer, AV &amp; structural consultants</li>
-      <li>Shop-drawing &amp; submittal review</li>
-      <li>Change management through construction</li>
-      <li>Scene-calibration planning</li>
-      <li>Delivery in your file standards <span class="vflag">formats to confirm</span></li>
-    </ul>
-  </div>
-  <div class="shots">
-    <div class="s s1"><img class="pmax" src="assets/scope/stage2-1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Coordination markup"></div></div>
-    <div class="s s2"><img class="pmax" src="assets/scope/stage2-2.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Site meeting"></div></div>
-    <div class="s s3"><img class="pmax" src="assets/scope/stage2-3.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Drawing set"></div></div>
-  </div>
-</section>
-
-<!-- STAGE 3 — On-Site Management (text left / photos right) -->
-<section class="stage rv">
-  <div class="txt">
-    <div class="st">Stage 3</div>
-    <h3>On-Site Management</h3>
-    <p class="what">Site visits, supervision and final commissioning — we don't leave until the light is exactly right.</p>
-    <h4>Deliverables</h4>
-    <ul>
-      <li>Site visits &amp; installation supervision</li>
-      <li>Aiming, focusing &amp; light testing</li>
-      <li>Scene programming &amp; commissioning <span class="vflag">system to confirm</span></li>
-      <li>Final walkthrough &amp; punch list</li>
-    </ul>
-  </div>
-  <div class="shots">
-    <div class="s s1"><img class="pmax" src="assets/scope/stage3-1.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Aiming fixtures"></div></div>
-    <div class="s s2"><img class="pmax" src="assets/scope/stage3-2.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Final scene"></div></div>
-    <div class="s s3"><img class="pmax" src="assets/scope/stage3-3.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="ph" data-label="Walkthrough"></div></div>
-  </div>
-</section>
-
-<!-- SCOPE ADD-ON -->
-<section class="scope-addon rv">
-  <div class="box"><b>Optional · Rendered Lighting Simulation</b> — <span>photorealistic visualization of representative spaces, before a single fixture is installed.</span></div>
 </section>
 
 <!-- 10 COORDINATION -->
 <section class="sec coord" id="coordination">
-  <div class="sec-head rv"><div class="sx">07 — Coordination</div></div>
+  <div class="sec-head rv"><div class="sx">08 — Coordination</div></div>
   <h2 class="big rv d1">Built to work inside <span class="it">your process.</span></h2>
   <div class="cograd rv d1">
-    <div class="copt"><h3>File standards</h3><p>We deliver in your formats and work directly on your drawings. <span class="vflag">formats to confirm</span></p></div>
+    <div class="copt"><h3>File standards</h3><p>We deliver in your formats and work directly on your drawings.</p></div>
     <div class="copt"><h3>Consultant coordination</h3><p>We coordinate directly with architecture, interior design, AV and structural — so lighting never becomes the thing that holds up the room.</p></div>
-    <div class="copt"><h3>Control &amp; integration</h3><p>We specify and commission the control system end to end. <span class="vflag">system to confirm</span></p></div>
+    <div class="copt"><h3>Control &amp; integration</h3><p>We specify and commission the control system end to end.</p></div>
   </div>
   <div class="close-line rv d1">The same studio that lights the room manages how it gets built.</div>
 </section>
@@ -678,7 +686,7 @@
 <section class="sec areas" id="areas">
   <div class="work-head">
     <div class="rv">
-      <div class="sx" style="margin-bottom:18px">08 — The Renovated Areas</div>
+      <div class="sx" style="margin-bottom:18px">09 — The Renovated Areas</div>
       <h2 class="big">Room by room,<br>a <span class="it">point of view</span></h2>
     </div>
     <div class="note rv d1">Per Studio Valle de Valle's drawings. Lighting scope covers the renovated areas only — but we don't read them as a list. Each room already has an intention.</div>
@@ -687,7 +695,6 @@
   <div class="floor-tags rv d1">
     <span class="ft">First Floor · 8 rooms</span>
     <span class="ft">Second Floor · 4 rooms</span>
-    <span class="ft ft-mute">[ 000 m² · to be confirmed ]</span>
   </div>
 
   <div class="rooms-compact rv d1">
@@ -697,7 +704,7 @@
   <div class="rooms-hero rv d1">
     <div class="k">Second Floor · the heart</div>
     <h3>Screening Room</h3>
-    <p>Graded for cinema, zero glare, scene-controlled — the room the whole house is built toward.</p>
+    <p>Graded for cinema, zero glare, scene-controlled.</p>
   </div>
 </section>
 
@@ -713,7 +720,7 @@
 
 <!-- 11 THE STUDIO -->
 <section class="sec studio" id="studio">
-  <div class="sec-head rv"><div class="sx">09 — The Studio</div></div>
+  <div class="sec-head rv"><div class="sx">10 — The Studio</div></div>
   <div class="lead rv d1">For 33 years, Karen Mannheim Lighting Studio has done one thing: make light give a space its <span class="it">meaning</span>.</div>
   <div class="grid">
     <div class="copy rv">
@@ -746,7 +753,7 @@
 
 <!-- 12 TRUSTED BY -->
 <section class="sec trust" id="trust">
-  <div class="sec-head rv"><div class="sx">10 — Trusted By</div></div>
+  <div class="sec-head rv"><div class="sx">11 — Trusted By</div></div>
   <h2 class="big rv d1">The firms who <span class="it">trust KMLS</span></h2>
   <div class="ps rv d1">
     <div class="p"><div class="nm">RAMSA</div><div class="ty">Robert A.M. Stern Architects</div></div>
@@ -759,29 +766,25 @@
     <div class="p"><div class="nm">Legeard Studio</div><div class="ty">New York</div></div>
     <div class="p"><div class="nm">2id Interiors</div><div class="ty">Miami</div></div>
     <div class="p"><div class="nm">Llosa Cortegana</div><div class="ty">Architects</div></div>
-    <div class="p"><div class="nm">Studio Valle de Valle</div><div class="ty">Interiors · New York · 41 Arvida</div></div>
   </div>
 </section>
 
 <!-- 13 INVESTMENT -->
 <section class="sec invest" id="investment">
-  <div class="sec-head rv"><div class="sx">11 — The Proposal</div></div>
+  <div class="sec-head rv"><div class="sx">12 — The Proposal</div></div>
   <h2 class="big rv d1">Investment</h2>
   <div class="grid">
     <div class="price rv">
       <div class="label">Integral Lighting Design</div>
-      <div class="desc">Renovated areas · Stages 1–3 · all deliverables included</div>
+      <div class="desc">Renovated areas · Stages 1–3 · everything included</div>
       <div class="fig">$ 35,000 <small>USD</small></div>
+      <div class="desc" style="margin-top:18px">Everything included — design, management, and on-site, through final commissioning. No stage priced separately, no add-ons.</div>
     </div>
     <div class="terms rv d1">
       <h4>Payment terms</h4>
       <ul>
         <li><b>70%</b> Upon signature, to begin</li>
         <li><b>30%</b> Before delivery of final drawings and documentation</li>
-      </ul>
-      <h4>Optional · Rendered Lighting Simulation</h4>
-      <ul>
-        <li><b>+ $</b> Photorealistic visualization of representative spaces, before installation — <em>placeholder amount</em></li>
       </ul>
       <div class="addr">
         <div class="h">Proposal to be addressed to</div>
@@ -794,8 +797,8 @@
 <!-- CLOSE -->
 <section class="cta" id="contact">
   <div class="kicker rv">The Beginning of a Conversation</div>
-  <h2 class="rv d1">Every room he's ever been in had an <span class="it">audience.</span><br>This one won't.</h2>
-  <p class="line rv d2">We'd be honored to design this alongside Studio Valle de Valle. You've spent months understanding who this house is for; we've spent every day since you reached out studying the rooms, the materials, the way the light should fall. If we do our work right, no one who lives here will ever think about the lighting at all. They'll just never want to leave the room.</p>
+  <h2 class="rv d1">Every room he's ever been in had an audience.<br>This one <span class="it">won't.</span></h2>
+  <p class="line rv d2">This house is going to be singular — and the light inside it should be held to the same standard as everything else you're designing. We'd be honored to build that part alongside you. Let's start with a conversation: show us where the house is headed, and we'll show you how we'd light it.</p>
   <a href="https://www.kmlightingstudio.com" class="btn rv d2">Start the conversation +</a>
 </section>
 
@@ -804,8 +807,8 @@
   <div class="foot-top">
     <div class="foot-col">
       <h4>Proposal</h4>
-      <a href="#approach">The Approach</a>
-      <a href="#craft">Our Craft</a>
+      <a href="#approach">A Shared Language</a>
+      <a href="#technology">The Technology</a>
       <a href="#work">Selected Work</a>
       <a href="#investment">Investment</a>
     </div>
@@ -932,12 +935,6 @@
     moraleja:{cat:'Residential · MORPH Studio',title:'La Moraleja Residence',loc:'Madrid',photos:5,
       challenge:'A contemporary residence with one of the world\'s top-100 architecture firms.',
       solution:'Restrained, architectural light that lets clean lines and the connection to the garden lead.'},
-    'residence-2':{cat:'Residential · Private',title:'A Private Apartment',loc:'Confidential',photos:4,
-      challenge:'Placeholder — add the challenge for this project.',
-      solution:'Placeholder — add the lighting approach for this project.'},
-    'residence-1':{cat:'Residential · Private',title:'A Private Family Residence',loc:'Confidential',photos:4,
-      challenge:'Placeholder — add the challenge for this project.',
-      solution:'Placeholder — add the lighting approach for this project.'},
     vivagym:{cat:'Commercial · Wellness',title:'Viva Gym Building',loc:'—',photos:4,
       challenge:'A wellness brand that lives or dies by how the space makes the body feel.',
       solution:'Energising by day, calming by night — light tuned to the body\'s own clock.'},
@@ -963,8 +960,8 @@
       challenge:'The second RAMSA tower — refining the lighting language across the collection.',
       solution:'A consistent, golden, architectural light carried through every shared and private space.'},
     privatevilla:{cat:'Residential · Private',title:'A Private Villa',loc:'Confidential',photos:6,
-      challenge:'Placeholder — add the challenge for this project.',
-      solution:'Placeholder — add the lighting approach for this project.'},
+      challenge:'A private villa where discretion and a calm, residential atmosphere mattered more than any single statement.',
+      solution:'Warm, concealed, fully dimmable layers — light that serves the architecture and quietly disappears into it.'},
     golden:{cat:'Residential · Oppenheim Architecture',title:'A Private Residence',loc:'Golden Beach',photos:6,
       challenge:'A waterfront residence with Oppenheim Architecture, open to the water on every side.',
       solution:'Architectural light that dissolves the line between inside and the bay beyond.'},
