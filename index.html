@@ -41,7 +41,9 @@
   .ph[data-label]::after{content:attr(data-label);position:absolute;bottom:18px;left:20px;font-family:var(--display);font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,241,234,.42)}
 
   /* NAV */
-  .nav{position:fixed;top:0;left:0;width:100%;z-index:150;mix-blend-mode:difference;transition:opacity .4s}
+  .nav{position:fixed;top:0;left:0;width:100%;z-index:150;mix-blend-mode:difference;transition:opacity .4s,background .4s,backdrop-filter .4s}
+  .nav.scrolled{mix-blend-mode:normal;background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(12px);-webkit-backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+  .nav.scrolled .logo,.nav.scrolled .ctx{color:var(--tinta)}
   .nav-in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:22px var(--pad);gap:20px}
   .nav-left,.nav-right{display:flex;gap:28px;align-items:center}
   .nav-right{justify-content:flex-end}
@@ -463,7 +465,7 @@
   .swhead h3{font-family:var(--display);font-weight:800;font-size:clamp(20px,2.2vw,30px);letter-spacing:-.02em}
   .swtime{font-family:var(--display);font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--bronce);border:1px solid var(--line);padding:6px 12px;border-radius:40px}
   .swhead .swtime{margin-left:auto}
-  .swsubs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,38px) clamp(30px,5vw,72px)}
+  .swsubs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,38px) clamp(30px,5vw,72px);align-items:start}
   .swsub{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start}
   .swsub .swn{font-family:var(--display);font-weight:300;font-size:clamp(22px,2.4vw,30px);line-height:1;color:var(--bronce-light)}
   .swsub h4{font-family:var(--display);font-weight:700;font-size:clamp(14.5px,1.4vw,17px);letter-spacing:-.01em;text-transform:uppercase;margin-bottom:9px;line-height:1.15}
@@ -566,49 +568,33 @@
 <section class="contents" id="contents">
   <div class="contents-head rv">
     <span class="sx">Contents</span>
-    <span class="contents-sub">41 Arvida · A Lighting Proposal in Twelve Parts</span>
+    <span class="contents-sub">41 Arvida · A Lighting Proposal in Eleven Parts</span>
   </div>
   <nav class="contents-list rv d1">
-    <a class="cx" href="#invite"><span class="cx-n">01</span><span class="cx-t">The Invitation</span><span class="cx-a">→</span></a>
-    <a class="cx" href="#approach"><span class="cx-n">02</span><span class="cx-t">A Shared Language</span><span class="cx-a">→</span></a>
-    <a class="cx" href="#technology"><span class="cx-n">03</span><span class="cx-t">The Technology</span><span class="cx-a">→</span></a>
-    <a class="cx" href="#proof"><span class="cx-n">04</span><span class="cx-t">The Company We Keep</span><span class="cx-a">→</span></a>
-    <a class="cx" href="#work"><span class="cx-n">05</span><span class="cx-t">Selected Work</span><span class="cx-a">→</span></a>
-    <a class="cx" href="#scope"><span class="cx-n">06</span><span class="cx-t">Our Scope of Work</span><span class="cx-a">→</span></a>
-    <a class="cx" href="#deliverables"><span class="cx-n">07</span><span class="cx-t">What You Receive</span><span class="cx-a">→</span></a>
-    <a class="cx" href="#areas"><span class="cx-n">08</span><span class="cx-t">The Renovated Areas</span><span class="cx-a">→</span></a>
-    <a class="cx" href="#studio"><span class="cx-n">09</span><span class="cx-t">The Studio</span><span class="cx-a">→</span></a>
-    <a class="cx" href="#trust"><span class="cx-n">10</span><span class="cx-t">Trusted By</span><span class="cx-a">→</span></a>
-    <a class="cx" href="#terms"><span class="cx-n">11</span><span class="cx-t">Terms &amp; Conditions</span><span class="cx-a">→</span></a>
-    <a class="cx" href="#investment"><span class="cx-n">12</span><span class="cx-t">Investment</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#approach"><span class="cx-n">01</span><span class="cx-t">A Shared Language</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#technology"><span class="cx-n">02</span><span class="cx-t">The Technology</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#proof"><span class="cx-n">03</span><span class="cx-t">The Company We Keep</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#work"><span class="cx-n">04</span><span class="cx-t">Selected Work</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#scope"><span class="cx-n">05</span><span class="cx-t">Our Scope of Work</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#deliverables"><span class="cx-n">06</span><span class="cx-t">What You Receive</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#areas"><span class="cx-n">07</span><span class="cx-t">The Renovated Areas</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#studio"><span class="cx-n">08</span><span class="cx-t">The Studio</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#trust"><span class="cx-n">09</span><span class="cx-t">Trusted By</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#terms"><span class="cx-n">10</span><span class="cx-t">Terms &amp; Conditions</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#investment"><span class="cx-n">11</span><span class="cx-t">Investment</span><span class="cx-a">→</span></a>
   </nav>
 </section>
 
-<!-- 01 THE INVITATION -->
-<section class="sec invite" id="invite">
+<!-- 01 A SHARED LANGUAGE (Invitation + Shared Language merged) -->
+<section class="sec invite" id="approach">
   <div class="l rv">
-    <div class="sx" style="margin-bottom:24px">01 — The Invitation</div>
+    <div class="sx" style="margin-bottom:24px">01 — A Shared Language</div>
     <h2>A single role, <span class="it">done precisely.</span></h2>
   </div>
   <div class="r rv d1">
-    <p>Studio Valle de Valle is reimagining the interiors of 41 Arvida. We were invited to design the light that lives inside them — and our role is singular: to serve what you're building, never to compete with it. You shape how the house looks. We make sure the light agrees.</p>
-    <p>What follows is how we work, the studios we've done it alongside, and exactly what we deliver — inside your process, at every stage.</p>
+    <p>Our role here is singular: to reveal what you've specified, never to compete with it. You shape how the house looks — we make sure the light agrees.</p>
+    <p>Your work speaks in plaster, iroko, microcement — surfaces that hold light instead of bouncing it. That's the grammar we light in too. No flood, no glare, no fixture competing with the architecture. The hardest light to engineer is <span class="it">the light you never notice.</span></p>
     <span class="tag">Scope · Renovated interiors · with Studio Valle de Valle</span>
-  </div>
-</section>
-
-<!-- 02 A SHARED LANGUAGE (approach + cinema merged, no photo) -->
-<section class="philo philo-flat" id="approach">
-  <div class="ph"></div>
-  <div class="inner rv">
-    <div class="kicker">02 — A Shared Language</div>
-    <div class="philo-grid">
-      <h2>You design the room. We design <span class="it">how its light behaves.</span></h2>
-      <div>
-        <p class="body">Your work speaks in plaster, iroko, microcement — surfaces that hold light instead of bouncing it, warmth that never announces itself. That's the grammar we light in too. No flood, no glare, no fixture competing with the architecture. The light serves the room you've drawn, and stays quiet about how.</p>
-        <p class="signoff-line">The hardest light to engineer is the light you <span class="it">never notice.</span></p>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -617,7 +603,7 @@
 
   <!-- ENCUADRE -->
   <div class="tech-frame rv">
-    <span class="tech-eyebrow">03 — The Technology</span>
+    <span class="tech-eyebrow">02 — The Technology</span>
     <h2 class="tech-title">You design the room. We make the light <span class="gold">disappear into it.</span></h2>
     <p class="tech-lead">The light you've imagined for this house is warm, quiet, and almost invisible — the kind that feels like it was always there. That's the hardest kind to engineer. It takes more control, not less, to make light this calm. This is the part of the house that runs underneath everything you've drawn.</p>
   </div>
@@ -626,21 +612,21 @@
   <div class="tech-layer rv">
     <span class="tech-sub-eyebrow">01 · The light</span>
     <h3 class="tech-sub-title">A light that dims like a candle.</h3>
-    <p class="tech-sub-body">A standard LED holds the same cold tone all the way down — flat and clinical at the bottom of the dial. The light we specify does the opposite: as it lowers, it warms. From a clean working white to the amber of a flame, the way daylight fades at dusk. On plaster, iroko and microcement, that warmth is everything — it lets your materials hold the light instead of bouncing it back.</p>
+    <p class="tech-sub-body">Most LEDs hold the same cold tone all the way down. Ours warms as it lowers — clean white to the amber of a flame, the way daylight fades at dusk. On your materials, that warmth is everything.</p>
   </div>
 
   <!-- 02 · THE SYSTEM -->
   <div class="tech-layer rv">
     <span class="tech-sub-eyebrow">02 · The system</span>
     <h3 class="tech-sub-title">A house that keeps time with the sun.</h3>
-    <p class="tech-sub-body">The light shifts through the day on its own — cool and awake in the morning, low and golden by night — tracking the sun by the home's own position. No wall of switches to read, nothing to program by hand, no cold blue glow at midnight. The house simply knows what the hour asks for. Artificial light that behaves like the window beside it.</p>
+    <p class="tech-sub-body">The light shifts on its own — cool in the morning, golden by night, tracking the sun. No switches to read, no cold glow at midnight. Artificial light that behaves like the window beside it.</p>
   </div>
 
   <!-- 03 · THE CONTROL -->
   <div class="tech-layer rv">
     <span class="tech-sub-eyebrow">03 · The control</span>
     <h3 class="tech-sub-title">One gesture, the whole room answers.</h3>
-    <p class="tech-sub-body">Below everything sits one control layer that keeps every fixture in agreement. We compose the scenes in advance — morning, evening, cinema, night — so the room arrives complete at a single touch, never balanced by hand in the moment. Even the hardest case, the screening room graded for cinema with zero glare, is just one more scene the house already holds.</p>
+    <p class="tech-sub-body">One control layer holds every fixture in agreement. The scenes are composed in advance — so the room arrives complete at a single touch. Even cinema, graded with zero glare, is a scene the house already holds.</p>
   </div>
 
   <!-- EL INSTRUMENTO — clímax interactivo -->
@@ -716,7 +702,7 @@
 <section class="sec work" id="proof">
   <div class="work-head">
     <div class="rv">
-      <div class="sx" style="margin-bottom:18px">04 — The Company We Keep</div>
+      <div class="sx" style="margin-bottom:18px">03 — The Company We Keep</div>
       <h2 class="big" style="text-transform:none">We've done<br>this <span class="it">before</span></h2>
     </div>
     <div class="side rv d1">We light homes for people the world recognizes and rarely gets to see inside. The discretion is the point — we speak this language fluently, and we keep it to ourselves. The stakes here are familiar to us, and so is working beside a studio that holds them to your standard.</div>
@@ -740,7 +726,7 @@
 <section class="sec work" id="work" style="border-top:none;padding-top:0">
   <div class="work-head">
     <div class="rv">
-      <div class="sx" style="margin-bottom:18px">05 — Selected Work</div>
+      <div class="sx" style="margin-bottom:18px">04 — Selected Work</div>
       <h2 class="big" style="text-transform:none">A portfolio,<br>by <span class="it">typology</span></h2>
     </div>
     <div class="side rv d1">The same studio that lights an art collector's home lights a tower, a beach house, a flagship. Click any project to open its story.</div>
@@ -772,7 +758,7 @@
 <section class="sec scope" id="scope">
   <div class="work-head">
     <div class="rv">
-      <div class="sx" style="margin-bottom:18px">06 — Our Scope of Work</div>
+      <div class="sx" style="margin-bottom:18px">05 — Our Scope of Work</div>
       <h2 class="big" style="text-transform:none">Three stages, one commitment: <span class="it">our scope of work.</span></h2>
     </div>
     <div class="note rv d1">We design the light, we protect it through construction, and we stay until it's right — in coordination with Studio Valle de Valle.</div>
@@ -817,7 +803,7 @@
 <section class="sec receive" id="deliverables">
   <div class="work-head">
     <div class="rv">
-      <div class="sx" style="margin-bottom:18px">07 — What you receive</div>
+      <div class="sx" style="margin-bottom:18px">06 — What you receive</div>
       <h2 class="big" style="text-transform:none">Every drawing, <span class="it">one final dossier.</span></h2>
     </div>
     <div class="note rv d1">Not a set of fragments handed over stage by stage — one complete, closeout dossier you can hold us to.</div>
@@ -839,7 +825,7 @@
 <section class="sec areas" id="areas">
   <div class="work-head">
     <div class="rv">
-      <div class="sx" style="margin-bottom:18px">08 — The Renovated Areas</div>
+      <div class="sx" style="margin-bottom:18px">07 — The Renovated Areas</div>
       <h2 class="big" style="text-transform:none">Room by room,<br>a <span class="it">point of view</span></h2>
     </div>
     <div class="note rv d1">Per Studio Valle de Valle's drawings. Lighting scope covers the renovated areas only — but we don't read them as a list. Each room already has an intention.</div>
@@ -863,7 +849,7 @@
 
 <!-- 11 THE STUDIO -->
 <section class="sec studio" id="studio">
-  <div class="sec-head rv"><div class="sx">09 — The Studio</div></div>
+  <div class="sec-head rv"><div class="sx">08 — The Studio</div></div>
   <div class="lead rv d1" style="text-transform:none">For 33 years, Karen Mannheim Lighting Studio has done one thing: make light give a space its <span class="it">meaning</span>.</div>
   <div class="grid">
     <div class="copy rv">
@@ -896,7 +882,7 @@
 
 <!-- 12 TRUSTED BY -->
 <section class="sec trust" id="trust">
-  <div class="sec-head rv"><div class="sx">10 — Trusted By</div></div>
+  <div class="sec-head rv"><div class="sx">09 — Trusted By</div></div>
   <h2 class="big rv d1">The firms who <span class="it">trust KMLS</span></h2>
   <div class="ps rv d1">
     <div class="p"><div class="nm">RAMSA</div><div class="ty">Robert A.M. Stern Architects</div></div>
@@ -914,7 +900,7 @@
 
 <!-- 11 TERMS & CONDITIONS -->
 <section class="sec terms-sec" id="terms">
-  <div class="sec-head rv"><div class="sx">11 — Terms &amp; Conditions</div></div>
+  <div class="sec-head rv"><div class="sx">10 — Terms &amp; Conditions</div></div>
   <h2 class="big rv d1" style="text-transform:none">The terms we <span class="it">work by.</span></h2>
   <div class="tclist rv d1">
     <div class="tcrow"><div class="tcl">Payment terms</div><div class="tcv">70% upon proposal approval and 30% before the delivery of final deliverables.</div></div>
@@ -927,7 +913,7 @@
 
 <!-- 12 INVESTMENT -->
 <section class="sec invest" id="investment">
-  <div class="sec-head rv"><div class="sx">12 — The Proposal</div></div>
+  <div class="sec-head rv"><div class="sx">11 — The Proposal</div></div>
   <h2 class="big rv d1">Investment</h2>
   <div class="grid">
     <div class="price rv">
@@ -1015,7 +1001,8 @@
 
 <script>
   const prog=document.getElementById('progress');
-  const onScroll=()=>{const h=document.documentElement;const max=h.scrollHeight-h.clientHeight;prog.style.width=(max>0?(h.scrollTop/max*100):0)+'%';};
+  const navEl=document.getElementById('nav');
+  const onScroll=()=>{const h=document.documentElement;const max=h.scrollHeight-h.clientHeight;prog.style.width=(max>0?(h.scrollTop/max*100):0)+'%';if(navEl)navEl.classList.toggle('scrolled',h.scrollTop>window.innerHeight*0.9);};
   document.addEventListener('scroll',onScroll,{passive:true});onScroll();
 
   const btns=document.querySelectorAll('.typo button');
@@ -1092,7 +1079,7 @@
     blascerdena:{cat:'Multifamily · RAMSA',title:'Blas Cerdeña',loc:'Lima',photos:8,
       challenge:'A high-end multifamily tower with RAMSA, from lobby to penthouse.',
       solution:'A single, cohesive lighting identity that makes every shared space feel considered.'},
-    poseidon:{cat:'Residential · Beachfront',title:'Poseidón Beach House',loc:'Lima',photos:8,
+    poseidon:{cat:'Residential · Beachfront',title:'Poseidón Beach House',loc:'Lima',photos:4,
       challenge:'A contemporary beach house facing the Pacific, where glare and salt are constant.',
       solution:'Warm, low, salt-resistant light that extends the golden hour indoors.'},
     fisher:{cat:'Residential · Adriana Hoyos',title:'Fisher Island Apartment',loc:'Miami',photos:5,
