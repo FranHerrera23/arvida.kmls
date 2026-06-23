@@ -454,6 +454,43 @@
   .rooms-hero h3{font-family:var(--display);font-weight:800;font-size:clamp(22px,2.4vw,34px);text-transform:uppercase;letter-spacing:-.02em}
   .rooms-hero p{margin-top:12px;font-size:clamp(15px,1.3vw,17px);line-height:1.7;color:rgba(244,241,234,.85);max-width:60ch}
 
+  /* SCOPE (detailed) */
+  .scopew{margin-top:46px}
+  .swstage{padding:clamp(34px,5vh,56px) 0;border-top:1px solid var(--line)}
+  .swstage:first-child{border-top:none;padding-top:0}
+  .swhead{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:26px}
+  .swhead .swst{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--bronce-deep)}
+  .swhead h3{font-family:var(--display);font-weight:800;font-size:clamp(20px,2.2vw,30px);letter-spacing:-.02em}
+  .swtime{font-family:var(--display);font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--bronce);border:1px solid var(--line);padding:6px 12px;border-radius:40px}
+  .swhead .swtime{margin-left:auto}
+  .swsubs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,38px) clamp(30px,5vw,72px)}
+  .swsub{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start}
+  .swsub .swn{font-family:var(--display);font-weight:300;font-size:clamp(22px,2.4vw,30px);line-height:1;color:var(--bronce-light)}
+  .swsub h4{font-family:var(--display);font-weight:700;font-size:clamp(14.5px,1.4vw,17px);letter-spacing:-.01em;text-transform:uppercase;margin-bottom:9px;line-height:1.15}
+  .swsub ul,.swlist{list-style:none}
+  .swsub li,.swlist li{position:relative;padding-left:16px;font-size:14px;line-height:1.6;color:var(--tinta-soft);margin-bottom:7px}
+  .swsub li::before,.swlist li::before{content:'';position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--bronce)}
+  .swstage.compact .swlist{max-width:64ch}
+  @media(max-width:760px){.swsubs{grid-template-columns:1fr}}
+
+  /* DELIVERABLES (single dossier) */
+  .dossier{margin-top:40px;border:1px solid var(--line);background:var(--cal-warm);padding:clamp(28px,4vw,48px)}
+  .dossier .dhead{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:26px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+  .dossier .dhead h3{font-family:var(--display);font-weight:800;font-size:clamp(18px,1.9vw,24px);letter-spacing:-.01em;text-transform:uppercase}
+  .dossier .dhead .swtime{margin-left:auto}
+  .dossier ul{list-style:none;columns:2;column-gap:clamp(30px,5vw,64px)}
+  .dossier li{position:relative;padding-left:18px;font-size:14.5px;line-height:1.6;color:var(--tinta);margin-bottom:14px;break-inside:avoid}
+  .dossier li::before{content:'';position:absolute;left:0;top:9px;width:5px;height:5px;border-radius:50%;background:var(--bronce)}
+  @media(max-width:760px){.dossier ul{columns:1}}
+
+  /* TERMS & CONDITIONS */
+  .terms-sec{border-top:1px solid var(--line)}
+  .tclist{margin-top:40px;border-top:1px solid var(--line)}
+  .tcrow{display:grid;grid-template-columns:.5fr 1fr;gap:clamp(20px,4vw,60px);padding:22px 0;border-bottom:1px solid var(--line-soft);align-items:start}
+  .tcrow .tcl{font-family:var(--display);font-size:12px;font-weight:700;letter-spacing:.02em;text-transform:uppercase;color:var(--tinta)}
+  .tcrow .tcv{font-size:14.5px;line-height:1.7;color:var(--tinta-soft)}
+  @media(max-width:760px){.tcrow{grid-template-columns:1fr;gap:8px}}
+
   /* MOBILE */
   @media(max-width:600px){
     :root{--pad:20px}
@@ -537,12 +574,12 @@
     <a class="cx" href="#technology"><span class="cx-n">03</span><span class="cx-t">The Technology</span><span class="cx-a">→</span></a>
     <a class="cx" href="#proof"><span class="cx-n">04</span><span class="cx-t">The Company We Keep</span><span class="cx-a">→</span></a>
     <a class="cx" href="#work"><span class="cx-n">05</span><span class="cx-t">Selected Work</span><span class="cx-a">→</span></a>
-    <a class="cx" href="#scope"><span class="cx-n">06</span><span class="cx-t">What We Do</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#scope"><span class="cx-n">06</span><span class="cx-t">Our Scope of Work</span><span class="cx-a">→</span></a>
     <a class="cx" href="#deliverables"><span class="cx-n">07</span><span class="cx-t">What You Receive</span><span class="cx-a">→</span></a>
-    <a class="cx" href="#coordination"><span class="cx-n">08</span><span class="cx-t">Coordination</span><span class="cx-a">→</span></a>
-    <a class="cx" href="#areas"><span class="cx-n">09</span><span class="cx-t">The Renovated Areas</span><span class="cx-a">→</span></a>
-    <a class="cx" href="#studio"><span class="cx-n">10</span><span class="cx-t">The Studio</span><span class="cx-a">→</span></a>
-    <a class="cx" href="#trust"><span class="cx-n">11</span><span class="cx-t">Trusted By</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#areas"><span class="cx-n">08</span><span class="cx-t">The Renovated Areas</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#studio"><span class="cx-n">09</span><span class="cx-t">The Studio</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#trust"><span class="cx-n">10</span><span class="cx-t">Trusted By</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#terms"><span class="cx-n">11</span><span class="cx-t">Terms &amp; Conditions</span><span class="cx-a">→</span></a>
     <a class="cx" href="#investment"><span class="cx-n">12</span><span class="cx-t">Investment</span><span class="cx-a">→</span></a>
   </nav>
 </section>
@@ -735,15 +772,44 @@
 <section class="sec scope" id="scope">
   <div class="work-head">
     <div class="rv">
-      <div class="sx" style="margin-bottom:18px">06 — What we do</div>
-      <h2 class="big" style="text-transform:none">Three stages,<br>one <span class="it">commitment.</span></h2>
+      <div class="sx" style="margin-bottom:18px">06 — Our Scope of Work</div>
+      <h2 class="big" style="text-transform:none">Three stages, one commitment: <span class="it">our scope of work.</span></h2>
     </div>
     <div class="note rv d1">We design the light, we protect it through construction, and we stay until it's right — in coordination with Studio Valle de Valle.</div>
   </div>
-  <div class="wstages rv d1">
-    <div class="wstage"><div class="st">Stage 1</div><div><h3>Lighting Design</h3><p>The complete design intent for every renovated space: concept, fixtures, and the technical basis behind each decision.</p></div></div>
-    <div class="wstage"><div class="st">Stage 2</div><div><h3>Design Management</h3><p>We protect the design through construction, resolving every change before it reaches the wall.</p></div></div>
-    <div class="wstage"><div class="st">Stage 3</div><div><h3>On-Site</h3><p>Site visits, supervision and final commissioning. We don't leave until the light is exactly right.</p></div></div>
+  <div class="scopew rv d1">
+
+    <div class="swstage">
+      <div class="swhead"><span class="swst">Stage 1</span><h3>Lighting Design</h3><span class="swtime">Delivery · 15 business days</span></div>
+      <div class="swsubs">
+        <div class="swsub"><span class="swn">01</span><div><h4>Site Assessment &amp; Briefing</h4><ul><li>Site assessment and gathering of initial information and project requirements</li></ul></div></div>
+        <div class="swsub"><span class="swn">02</span><div><h4>Lighting Concept &amp; Strategy</h4><ul><li>General lighting concept with a complete moodboard per each space</li></ul></div></div>
+        <div class="swsub"><span class="swn">03</span><div><h4>Fixture Selection &amp; Placement</h4><ul><li>Lighting layouts with fixtures placement according to the concept</li><li>Legend with fixture symbols &amp; nomenclature</li><li>Specbook for each selected fixture</li></ul></div></div>
+        <div class="swsub"><span class="swn">04</span><div><h4>Lighting Control System</h4><ul><li>Switching plan</li><li>Keypad distribution proposal layout</li><li>Advanced control systems evaluated to integrate the most appropriate solution, such as Ketra by Lutron</li></ul></div></div>
+        <div class="swsub"><span class="swn">05</span><div><h4>Photometric Calculations &amp; Rendered Simulation</h4><ul><li>Photometric calculations for 5 principal spaces (Dialux with real photometry)</li></ul></div></div>
+        <div class="swsub"><span class="swn">06</span><div><h4>Coordination with Other Disciplines</h4><ul><li>Coordination with architecture, interior design and other technical trades</li></ul></div></div>
+      </div>
+    </div>
+
+    <div class="swstage compact">
+      <div class="swhead"><span class="swst">Stage 2</span><h3>Lighting Design Management</h3></div>
+      <ul class="swlist">
+        <li>Coordination meetings with architects and interior designers — (10) meetings</li>
+        <li>Change management — (10) drawing modifications &amp; updates</li>
+        <li>Support during construction</li>
+      </ul>
+    </div>
+
+    <div class="swstage compact">
+      <div class="swhead"><span class="swst">Stage 3</span><h3>On-Site Management</h3><span class="swtime">Delivery · per construction schedule</span></div>
+      <ul class="swlist">
+        <li>Site visits at key milestones — (3) visits</li>
+        <li>Supervision reports</li>
+        <li>Resolution of technical queries</li>
+        <li>Light testing to verify correct installation</li>
+      </ul>
+    </div>
+
   </div>
 </section>
 
@@ -752,61 +818,28 @@
   <div class="work-head">
     <div class="rv">
       <div class="sx" style="margin-bottom:18px">07 — What you receive</div>
-      <h2 class="big" style="text-transform:none">Every drawing,<br>every <span class="it">stage.</span></h2>
+      <h2 class="big" style="text-transform:none">Every drawing, <span class="it">one final dossier.</span></h2>
     </div>
-    <div class="note rv d1">The concrete set you can hold us to — grouped by stage, delivered inside your process.</div>
+    <div class="note rv d1">Not a set of fragments handed over stage by stage — one complete, closeout dossier you can hold us to.</div>
   </div>
-  <div class="rgroups rv d1">
-    <div class="rgroup">
-      <h4>From Stage 1</h4>
-      <ul>
-        <li>Lighting concept &amp; atmosphere, per space</li>
-        <li>Reflected ceiling plans (RCP) with fixture locations &amp; types</li>
-        <li>Fixture schedule &amp; specifications</li>
-        <li>Photometric calculations</li>
-        <li>Control-system strategy — scenes, zoning, dimming</li>
-        <li>Full construction dossier</li>
-      </ul>
-    </div>
-    <div class="rgroup">
-      <h4>From Stage 2</h4>
-      <ul>
-        <li>Coordination with architect, interior designer, AV &amp; structural consultants</li>
-        <li>Shop-drawing &amp; submittal review</li>
-        <li>Change management through construction</li>
-        <li>Scene-calibration planning</li>
-        <li>Delivery in your file standards</li>
-      </ul>
-    </div>
-    <div class="rgroup">
-      <h4>From Stage 3</h4>
-      <ul>
-        <li>Site visits &amp; installation supervision</li>
-        <li>Aiming, focusing &amp; light testing</li>
-        <li>Scene programming &amp; commissioning</li>
-        <li>Final walkthrough &amp; punch list</li>
-      </ul>
-    </div>
+  <div class="dossier rv d1">
+    <div class="dhead"><h3>Final Dossier · Closeout Deliverables</h3><span class="swtime">Delivery · 15 business days</span></div>
+    <ul>
+      <li>AutoCAD lighting layouts per room — including dimensions, distances, annotations, low-voltage wiring, panel locations &amp; electrical outlets</li>
+      <li>AutoCAD layouts with switching and keypads location</li>
+      <li>Complete specification legend for each fixture</li>
+      <li>Reference construction &amp; lighting installation details</li>
+      <li>Complete specbook for each selected fixture</li>
+      <li>Photorealistic 3D views showing the lighting layers — (2) per each room</li>
+    </ul>
   </div>
 </section>
 
-<!-- 10 COORDINATION -->
-<section class="sec coord" id="coordination">
-  <div class="sec-head rv"><div class="sx">08 — Coordination</div></div>
-  <h2 class="big rv d1" style="text-transform:none">Built to work inside <span class="it">your process.</span></h2>
-  <div class="cograd rv d1">
-    <div class="copt"><h3>File standards</h3><p>We deliver in your formats and work directly on your drawings.</p></div>
-    <div class="copt"><h3>Consultant coordination</h3><p>We coordinate directly with architecture, interior design, AV and structural — so lighting never becomes the thing that holds up the room.</p></div>
-    <div class="copt"><h3>Control &amp; integration</h3><p>We specify and commission the control system end to end.</p></div>
-  </div>
-  <div class="close-line rv d1">The same studio that lights the room manages how it gets built.</div>
-</section>
-
-<!-- 10 THE RENOVATED AREAS -->
+<!-- 08 THE RENOVATED AREAS -->
 <section class="sec areas" id="areas">
   <div class="work-head">
     <div class="rv">
-      <div class="sx" style="margin-bottom:18px">09 — The Renovated Areas</div>
+      <div class="sx" style="margin-bottom:18px">08 — The Renovated Areas</div>
       <h2 class="big" style="text-transform:none">Room by room,<br>a <span class="it">point of view</span></h2>
     </div>
     <div class="note rv d1">Per Studio Valle de Valle's drawings. Lighting scope covers the renovated areas only — but we don't read them as a list. Each room already has an intention.</div>
@@ -830,7 +863,7 @@
 
 <!-- 11 THE STUDIO -->
 <section class="sec studio" id="studio">
-  <div class="sec-head rv"><div class="sx">10 — The Studio</div></div>
+  <div class="sec-head rv"><div class="sx">09 — The Studio</div></div>
   <div class="lead rv d1" style="text-transform:none">For 33 years, Karen Mannheim Lighting Studio has done one thing: make light give a space its <span class="it">meaning</span>.</div>
   <div class="grid">
     <div class="copy rv">
@@ -863,7 +896,7 @@
 
 <!-- 12 TRUSTED BY -->
 <section class="sec trust" id="trust">
-  <div class="sec-head rv"><div class="sx">11 — Trusted By</div></div>
+  <div class="sec-head rv"><div class="sx">10 — Trusted By</div></div>
   <h2 class="big rv d1">The firms who <span class="it">trust KMLS</span></h2>
   <div class="ps rv d1">
     <div class="p"><div class="nm">RAMSA</div><div class="ty">Robert A.M. Stern Architects</div></div>
@@ -879,27 +912,35 @@
   </div>
 </section>
 
-<!-- 13 INVESTMENT -->
+<!-- 11 TERMS & CONDITIONS -->
+<section class="sec terms-sec" id="terms">
+  <div class="sec-head rv"><div class="sx">11 — Terms &amp; Conditions</div></div>
+  <h2 class="big rv d1" style="text-transform:none">The terms we <span class="it">work by.</span></h2>
+  <div class="tclist rv d1">
+    <div class="tcrow"><div class="tcl">Payment terms</div><div class="tcv">70% upon proposal approval and 30% before the delivery of final deliverables.</div></div>
+    <div class="tcrow"><div class="tcl">Onboarding requirements</div><div class="tcv">The client must provide architectural base files in AutoCAD format to initiate services.</div></div>
+    <div class="tcrow"><div class="tcl">Design revisions &amp; scope modifications</div><div class="tcv">Modifications to architectural and interior design layouts will only be accommodated prior to the commencement of the Final Dossier phase. Any changes requested thereafter will incur additional fees.</div></div>
+    <div class="tcrow"><div class="tcl">Project closeout</div><div class="tcv">All project phases are bound by predefined commencement and completion dates. The issuance of the Final Dossier marks the formal conclusion of the contracted scope of work. Any additional services or design revisions requested subsequent to this milestone will require a separate project proposal and fee estimate.</div></div>
+    <div class="tcrow"><div class="tcl">Proposal validity</div><div class="tcv">This proposal remains valid for 30 business days from the date of issuance.</div></div>
+  </div>
+</section>
+
+<!-- 12 INVESTMENT -->
 <section class="sec invest" id="investment">
   <div class="sec-head rv"><div class="sx">12 — The Proposal</div></div>
   <h2 class="big rv d1">Investment</h2>
   <div class="grid">
     <div class="price rv">
       <div class="label">Integral Lighting Design</div>
-      <div class="desc">Renovated areas · Stages 1–3 · everything included</div>
-      <div class="fig">$ 35,000 <small>USD</small></div>
-      <div class="desc" style="margin-top:18px">Everything included — design, management, and on-site, through final commissioning. No stage priced separately, no add-ons.</div>
+      <div class="desc">Includes everything in each stage + final dossier.</div>
+      <div class="fig">$ 40,000 <small>USD</small></div>
     </div>
     <div class="terms rv d1">
       <h4>Payment terms</h4>
       <ul>
-        <li><b>70%</b> Upon signature, to begin</li>
-        <li><b>30%</b> Before delivery of final drawings and documentation</li>
+        <li><b>70%</b> Upon proposal approval</li>
+        <li><b>30%</b> Before delivery of final deliverables</li>
       </ul>
-      <div class="addr">
-        <div class="h">Proposal to be addressed to</div>
-        <p><b>Tropic Estate Land Trust</b><br>c/o David Weise &amp; Associates<br>15821 Ventura Blvd., Ste 370<br>Encino, CA 91436</p>
-      </div>
     </div>
   </div>
 </section>
