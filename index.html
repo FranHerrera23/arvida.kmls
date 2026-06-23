@@ -447,6 +447,20 @@
     .cta,.foot,.philo,.reading,.fullbleed{background:#fff !important;color:#000 !important}
     .reading .body,.philo .body,.cta .line{color:#333 !important}
   }
+
+  /* CONTENTS / INDEX (editorial AD) */
+  .contents{max-width:1180px;margin:0 auto;padding:clamp(56px,9vh,104px) clamp(28px,6vw,72px) clamp(48px,7vh,88px);border-top:1px solid var(--line)}
+  .contents-head{display:flex;justify-content:space-between;align-items:baseline;gap:24px;border-bottom:1px solid var(--tinta);padding-bottom:18px;flex-wrap:wrap}
+  .contents-head .sx{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--bronce-deep)}
+  .contents-sub{font-family:var(--display);font-size:11px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--tinta-mute)}
+  .contents-list{display:block;margin-top:2px}
+  .cx{display:flex;align-items:baseline;gap:clamp(20px,3vw,40px);padding:clamp(16px,2.2vh,24px) 4px;border-bottom:1px solid var(--line);text-decoration:none;cursor:pointer;transition:padding-left .28s cubic-bezier(.4,0,.2,1),background .28s ease}
+  .cx:hover{padding-left:16px;background:rgba(111,94,68,.04)}
+  .cx-n{font-family:var(--display);font-weight:300;font-size:clamp(26px,3vw,36px);letter-spacing:-.02em;line-height:1;color:var(--bronce-light);min-width:54px}
+  .cx-t{font-family:var(--display);font-weight:700;font-size:clamp(19px,2.2vw,30px);letter-spacing:-.02em;line-height:1.05;text-transform:uppercase;color:var(--tinta)}
+  .cx-a{margin-left:auto;align-self:center;font-family:var(--display);font-size:15px;color:var(--bronce-light);opacity:0;transition:opacity .28s ease,transform .28s ease;transform:translateX(-6px)}
+  .cx:hover .cx-a{opacity:1;transform:translateX(0)}
+  @media (max-width:640px){.cx-n{min-width:40px}.cx-a{display:none}}
 </style>
 </head>
 <body>
@@ -479,6 +493,28 @@
     </div>
   </div>
 </header>
+
+<!-- ÍNDICE / CONTENTS -->
+<section class="contents" id="contents">
+  <div class="contents-head rv">
+    <span class="sx">Contents</span>
+    <span class="contents-sub">41 Arvida · A Lighting Proposal in Twelve Parts</span>
+  </div>
+  <nav class="contents-list rv d1">
+    <a class="cx" href="#invite"><span class="cx-n">01</span><span class="cx-t">The Invitation</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#approach"><span class="cx-n">02</span><span class="cx-t">A Shared Language</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#technology"><span class="cx-n">03</span><span class="cx-t">The Technology</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#proof"><span class="cx-n">04</span><span class="cx-t">The Company We Keep</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#work"><span class="cx-n">05</span><span class="cx-t">Selected Work</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#scope"><span class="cx-n">06</span><span class="cx-t">What We Do</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#deliverables"><span class="cx-n">07</span><span class="cx-t">What You Receive</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#coordination"><span class="cx-n">08</span><span class="cx-t">Coordination</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#areas"><span class="cx-n">09</span><span class="cx-t">The Renovated Areas</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#studio"><span class="cx-n">10</span><span class="cx-t">The Studio</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#trust"><span class="cx-n">11</span><span class="cx-t">Trusted By</span><span class="cx-a">→</span></a>
+    <a class="cx" href="#investment"><span class="cx-n">12</span><span class="cx-t">Investment</span><span class="cx-a">→</span></a>
+  </nav>
+</section>
 
 <!-- 01 THE INVITATION -->
 <section class="sec invite" id="invite">
