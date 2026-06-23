@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root{
-    --cal:#F4F1EA; --cal-deep:#EAE4D8; --cal-warm:#EFE9DC;
+    --cal:#FFFFFF; --cal-deep:#ECEAE4; --cal-warm:#F6F5F1;
     --tinta:#1A1916; --tinta-soft:#4A463F; --tinta-mute:#756F64;
     --bronce:#9A8463; --bronce-deep:#6F5E44; --bronce-light:#BBA888;
     --line:#D6CFC1; --line-soft:#E2DBCD;
@@ -63,7 +63,7 @@
   .hero .ph{z-index:-2}
   .hero::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(16,13,9,.55) 0%,rgba(16,13,9,.18) 40%,rgba(16,13,9,.82) 100%)}
   .hero .kicker{color:var(--bronce-light);margin-bottom:30px}
-  .hero h1{font-family:var(--display);font-weight:800;font-size:clamp(32px,4.75vw,78px);line-height:1.02;letter-spacing:-.03em;max-width:20ch;text-wrap:balance}
+  .hero h1{font-family:var(--display);font-weight:800;font-size:clamp(30px,3.8vw,60px);line-height:1.06;letter-spacing:-.03em;max-width:20ch;text-wrap:balance}
   .hero h1 .it{color:var(--bronce-light)}
   .hero .sub{margin-top:30px;max-width:52ch;font-size:clamp(15px,1.4vw,18px);line-height:1.7;color:rgba(244,241,234,.86)}
   .hero-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-top:clamp(40px,8vh,80px)}
@@ -80,12 +80,12 @@
   .sec{padding:clamp(80px,12vh,150px) var(--pad)}
   .sec-head{display:flex;gap:24px;align-items:baseline;margin-bottom:46px;flex-wrap:wrap}
   .sec-head .sx{white-space:nowrap}
-  h2.big{font-family:var(--display);font-weight:800;font-size:clamp(30px,5.4vw,80px);letter-spacing:-.025em;line-height:.98;text-transform:uppercase}
+  h2.big{font-family:var(--display);font-weight:800;font-size:clamp(28px,4.2vw,60px);letter-spacing:-.025em;line-height:1.06;text-transform:uppercase;text-wrap:balance}
   h2.big .it{display:inline}
 
   /* INVITATION */
   .invite{border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(30px,6vw,90px);align-items:center}
-  .invite .l h2{font-family:var(--display);font-weight:700;font-size:clamp(26px,3.6vw,54px);line-height:1.05;letter-spacing:-.02em;text-transform:uppercase}
+  .invite .l h2{font-family:var(--display);font-weight:700;font-size:clamp(24px,3vw,44px);line-height:1.08;letter-spacing:-.02em;text-transform:uppercase;text-wrap:balance}
   .invite .l h2 .it{display:block}
   .invite .r p{font-size:clamp(16px,1.3vw,18.5px);line-height:1.85;color:var(--tinta-soft);margin-bottom:20px;max-width:58ch}
   .invite .r p strong{color:var(--tinta);font-weight:600}
@@ -100,7 +100,7 @@
   .philo .inner{width:100%}
   .philo .kicker{color:var(--bronce-light);margin-bottom:clamp(36px,6vh,64px)}
   .philo-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(36px,6vw,90px);align-items:end}
-  .philo h2{font-family:var(--display);font-weight:800;font-size:clamp(30px,4.2vw,60px);line-height:1.05;letter-spacing:-.022em;text-transform:uppercase}
+  .philo h2{font-family:var(--display);font-weight:800;font-size:clamp(26px,3.4vw,48px);line-height:1.08;letter-spacing:-.022em;text-transform:uppercase;text-wrap:balance}
   .philo h2 .it{color:var(--bronce-light)}
   .philo .body{max-width:52ch;font-size:clamp(16px,1.2vw,18.5px);line-height:1.85;color:rgba(244,241,234,.88)}
   .philo .body .em{color:var(--bronce-light);font-weight:600}
@@ -112,7 +112,7 @@
   .reading .img>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
   .reading .txt{display:flex;flex-direction:column;justify-content:center;padding:clamp(50px,9vh,110px) clamp(28px,5vw,80px)}
   .reading .kicker{color:var(--bronce-light);margin-bottom:26px}
-  .reading h2{font-family:var(--display);font-weight:800;font-size:clamp(28px,3.7vw,50px);line-height:1.04;letter-spacing:-.025em;text-transform:uppercase}
+  .reading h2{font-family:var(--display);font-weight:800;font-size:clamp(24px,3vw,42px);line-height:1.08;letter-spacing:-.025em;text-transform:uppercase;text-wrap:balance}
   .reading .body{margin-top:26px;max-width:52ch;font-size:clamp(16px,1.15vw,18.5px);line-height:1.85;color:rgba(244,241,234,.88)}
   .reading .body p+p{margin-top:18px}
   .reading .signoff{margin-top:30px;font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(17px,1.6vw,23px);color:var(--bronce-light);max-width:34ch;line-height:1.3}
@@ -133,7 +133,7 @@
 
   /* STUDIO */
   .studio{border-top:1px solid var(--line)}
-  .studio .lead{font-family:var(--display);font-weight:700;font-size:clamp(22px,2.5vw,38px);line-height:1.14;letter-spacing:-.02em;text-transform:uppercase;max-width:26ch}
+  .studio .lead{font-family:var(--display);font-weight:700;font-size:clamp(22px,2.5vw,38px);line-height:1.14;letter-spacing:-.02em;text-transform:uppercase;max-width:26ch;text-wrap:balance}
   .studio .lead .it{text-transform:none}
   .studio .grid{margin-top:60px;display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(30px,6vw,80px);align-items:start}
   .studio .copy p{font-size:clamp(15px,1.3vw,17px);line-height:1.78;color:var(--tinta-soft);max-width:52ch;margin-bottom:18px}
@@ -166,10 +166,11 @@
   /* FOUNDER */
   .founder{border-top:1px solid var(--line);display:grid;grid-template-columns:.82fr 1.18fr;gap:0;align-items:stretch;background:var(--tinta);color:#fff}
   .founder-img{position:relative;overflow:hidden;background:#16130f;min-height:clamp(420px,62vh,680px)}
-  .founder-img>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+  .founder-img>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;filter:grayscale(1) contrast(1.04) brightness(.97)}
+  .founder-img::after{content:'';position:absolute;inset:0;z-index:2;background:var(--bronce-deep);mix-blend-mode:color;opacity:.35;pointer-events:none}
   .founder-txt{display:flex;flex-direction:column;justify-content:center;padding:clamp(48px,8vh,104px) clamp(30px,5.5vw,84px)}
   .founder-txt .kicker{color:var(--bronce-light);margin-bottom:26px}
-  .founder-txt h2{font-family:var(--display);font-weight:800;font-size:clamp(30px,3.6vw,52px);line-height:1;letter-spacing:-.03em;text-transform:uppercase}
+  .founder-txt h2{font-family:var(--display);font-weight:800;font-size:clamp(26px,3vw,44px);line-height:1.05;letter-spacing:-.03em;text-transform:uppercase;text-wrap:balance}
   .founder-txt h2 .it{color:var(--bronce-light)}
   .founder-role{font-family:var(--display);font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,241,234,.6);margin-top:16px}
   .founder-quote{font-family:var(--sans);font-weight:500;font-size:clamp(17px,1.5vw,22px);line-height:1.5;color:var(--bronce-light);max-width:38ch;margin-top:clamp(26px,4vh,40px)}
@@ -205,7 +206,7 @@
   .fcard .badge2::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--bronce-light);animation:pulse 2.4s infinite}
   @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(187,168,136,.5)}70%{box-shadow:0 0 0 10px rgba(187,168,136,0)}100%{box-shadow:0 0 0 0 rgba(187,168,136,0)}}
   .fcard .c{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,241,234,.8);margin-bottom:10px}
-  .fcard h3{font-family:var(--display);font-weight:800;font-size:clamp(24px,2.8vw,42px);line-height:1;letter-spacing:-.02em;text-transform:uppercase}
+  .fcard h3{font-family:var(--display);font-weight:800;font-size:clamp(22px,2.4vw,36px);line-height:1.05;letter-spacing:-.02em;text-transform:uppercase;text-wrap:balance}
   .fcard .gal{margin-top:16px;display:flex;align-items:center;gap:11px;font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#fff}
   .fcard .gal .arrow{width:30px;height:30px;border:1px solid rgba(255,255,255,.5);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;transition:.25s}
   .fcard:hover .gal .arrow{background:#fff;color:var(--tinta)}
@@ -233,12 +234,7 @@
   @media(max-width:760px){.pgrid{grid-template-columns:1fr 1fr}}
   @media(max-width:480px){.pgrid{grid-template-columns:1fr}}
 
-  /* MARQUEE */
-  .scale{padding:74px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
-  .marq{display:flex;white-space:nowrap;animation:slide 30s linear infinite;width:max-content}
-  .marq span{font-family:var(--display);font-weight:800;font-size:clamp(40px,8vw,108px);letter-spacing:-.02em;text-transform:uppercase;padding-right:56px;line-height:1}
-  .marq span:nth-child(even){color:transparent;-webkit-text-stroke:1.3px var(--bronce)}
-  @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  /* (marquee removed — section break handled by .studio border-top) */
 
   /* SCOPE */
   .scope{border-top:1px solid var(--line)}
@@ -282,7 +278,7 @@
   .price{border:1px solid var(--line);background:var(--cal-warm);padding:clamp(30px,4vw,52px)}
   .price .label{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--bronce-deep)}
   .price .desc{font-size:14px;color:var(--tinta-soft);margin-top:10px;line-height:1.55}
-  .price .fig{font-family:var(--display);font-weight:800;font-size:clamp(38px,6vw,72px);letter-spacing:-.035em;line-height:1;margin-top:26px}
+  .price .fig{font-family:var(--display);font-weight:800;font-size:clamp(34px,4.6vw,56px);letter-spacing:-.035em;line-height:1;margin-top:26px}
   .price .fig small{font-family:var(--display);font-weight:600;font-size:.26em;letter-spacing:.06em;color:var(--tinta-mute);display:inline-block;margin-left:8px;text-transform:uppercase;vertical-align:middle}
   .price .ph-note{margin-top:14px;font-family:var(--display);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--bronce-deep)}
   .terms h4{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--bronce-deep);margin-bottom:8px}
@@ -298,7 +294,7 @@
   /* CTA / FOOTER */
   .cta{background:var(--tinta);color:var(--cal);padding:clamp(90px,16vh,180px) var(--pad);text-align:center}
   .cta .kicker{color:var(--bronce-light);margin-bottom:30px}
-  .cta h2{font-family:var(--display);font-weight:800;font-size:clamp(32px,5.6vw,84px);letter-spacing:-.03em;line-height:.98;text-transform:uppercase}
+  .cta h2{font-family:var(--display);font-weight:800;font-size:clamp(28px,4.2vw,60px);letter-spacing:-.03em;line-height:1.06;text-transform:uppercase;text-wrap:balance}
   .cta h2 .it{color:var(--bronce-light)}
   .cta .line{margin:30px auto 0;max-width:48ch;font-size:clamp(15px,1.4vw,18px);line-height:1.7;color:rgba(244,241,234,.78)}
   .cta .line .em{color:var(--bronce-light);font-family:var(--display);font-style:normal;font-weight:700}
@@ -354,24 +350,26 @@
   /* SHARED LANGUAGE sign-off line */
   .philo .signoff-line{margin-top:24px;font-family:var(--display);font-style:normal;font-weight:600;font-size:clamp(16px,1.45vw,21px);line-height:1.45;color:var(--bronce-light)}
 
-  /* TECHNOLOGY */
+  /* TECHNOLOGY (4 moments, breathing) */
   .tech{border-top:1px solid var(--line)}
-  .tech .tgrid2{margin-top:clamp(40px,6vh,72px);display:grid;grid-template-columns:1fr 1.04fr;gap:clamp(34px,5vw,72px);align-items:center}
-  .tbeat+.tbeat{margin-top:32px;padding-top:32px;border-top:1px solid var(--line-soft)}
-  .tbeat .te{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--bronce-deep)}
-  .tbeat h3{font-family:var(--display);font-weight:700;font-size:clamp(20px,2vw,28px);letter-spacing:-.02em;margin-top:10px;line-height:1.1}
-  .tbeat p{margin-top:12px;font-size:clamp(14px,1.15vw,16px);line-height:1.7;color:var(--tinta-soft);max-width:48ch}
-  .tech .graphcard{background:var(--cal-warm);border:1px solid var(--line);padding:clamp(22px,2.6vw,36px)}
-  .tech .graphcard .gh{font-family:var(--display);font-weight:700;font-size:clamp(16px,1.5vw,21px);letter-spacing:-.01em;margin-bottom:14px}
-  .tech .graphcard svg{width:100%;height:auto;display:block}
-  .tech .foot-tech{margin-top:clamp(30px,4vh,48px);font-size:12.5px;color:var(--tinta-mute)}
-  @media(max-width:840px){.tech .tgrid2{grid-template-columns:1fr;gap:34px}}
+  .tech-intro{max-width:60ch}
+  .tech-intro .sx{display:block;margin-bottom:18px}
+  .tech-intro h2{margin-bottom:26px}
+  .tech-lead{font-size:clamp(16px,1.3vw,19px);line-height:1.78;color:var(--tinta-soft);max-width:58ch}
+  .tech-beat{max-width:58ch;padding-top:clamp(56px,9vh,120px)}
+  .tech-beat .te{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--bronce-deep)}
+  .tech-beat h3{font-family:var(--display);font-weight:700;font-size:clamp(22px,2.4vw,32px);letter-spacing:-.02em;margin-top:12px;line-height:1.12;text-wrap:balance}
+  .tech-beat p{margin-top:16px;font-size:clamp(15px,1.2vw,17.5px);line-height:1.78;color:var(--tinta-soft)}
+  .tech-graph{margin:clamp(56px,10vh,120px) auto 0;max-width:840px;background:var(--cal-warm);border:1px solid var(--line);padding:clamp(26px,4vw,56px)}
+  .tech-graph .gh{font-family:var(--display);font-weight:700;font-size:clamp(18px,1.9vw,26px);letter-spacing:-.01em;margin-bottom:22px;text-align:center;text-wrap:balance}
+  .tech-graph svg{width:100%;height:auto;display:block}
+  .tech-beat .foot-tech{margin-top:clamp(26px,4vh,44px);font-size:12.5px;color:var(--tinta-mute);max-width:58ch}
 
   /* SCOPE STAGES (zigzag, cream) */
   .stages-head{padding:clamp(80px,12vh,150px) var(--pad) 0;border-top:1px solid var(--line)}
   .stage{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,72px);align-items:center;padding:clamp(54px,8vh,96px) var(--pad)}
   .stage .txt .st{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--bronce-deep)}
-  .stage .txt h3{font-family:var(--display);font-weight:800;font-size:clamp(24px,3vw,42px);letter-spacing:-.02em;text-transform:uppercase;line-height:1.02;margin-top:14px}
+  .stage .txt h3{font-family:var(--display);font-weight:800;font-size:clamp(22px,2.5vw,36px);letter-spacing:-.02em;text-transform:uppercase;line-height:1.08;margin-top:14px;text-wrap:balance}
   .stage .txt .what{margin-top:18px;font-size:clamp(15px,1.25vw,17.5px);line-height:1.7;color:var(--tinta-soft);max-width:46ch}
   .stage .txt h4{font-family:var(--display);font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--bronce-deep);margin:26px 0 12px}
   .stage .txt ul{list-style:none;margin:0}
@@ -438,7 +436,7 @@
   }
 
   @media print{
-    .nav,.progress,.hero .scroll,.scale{display:none}
+    .nav,.progress,.hero .scroll{display:none}
     body{background:#fff} .hero,.philo,.reading,.fullbleed,.founder{min-height:auto;color:#000}
     .hero::after,.philo::after,.reading,.fullbleed::after,.founder{background:#fff !important}
     .founder,.founder-txt h2,.founder-role,.founder-body{color:#000 !important}
@@ -481,7 +479,7 @@
   <img class="pmax" src="assets/arvida/hero.jpg" alt="" onerror="this.remove()">
   <div class="ph" data-label="Hero — 41 Arvida at dusk (warm, cinematic)"></div>
   <div class="kicker rv">Lighting Design Proposal · 41 Arvida · Confidential</div>
-  <h1 class="rv d1">For a lifetime the light has been pointed at him.<br>Here, he decides where it <span class="it">falls.</span></h1>
+  <h1 class="rv d1">For a lifetime the light has been pointed at him.<br>Here, he decides where <span style="white-space:nowrap">it <span class="it">falls.</span></span></h1>
   <p class="sub rv d2">Studio Valle de Valle is reimagining the interiors of 41 Arvida. We were invited to design the light that lives inside them — for a client who has spent a career being seen, and a home built so he can choose, for once, when he isn't. This is how we'd read this house, and how we'd light it.</p>
   <div class="hero-foot">
     <div class="scroll rv d2"><span class="dot">↓</span> Read the house</div>
@@ -546,27 +544,20 @@
 
 <!-- 03 THE TECHNOLOGY -->
 <section class="sec tech" id="technology">
-  <div class="work-head">
-    <div class="rv">
-      <div class="sx" style="margin-bottom:18px">03 — The Technology</div>
-      <h2 class="big">You design the room.<br>We make the light <span class="it">disappear into it.</span></h2>
-    </div>
-    <div class="note rv d1">The light you've imagined for this house is warm, quiet, and almost invisible — the kind that feels like it was always there. That's the hardest kind to engineer. It takes more control, not less, to make light this calm. This is the part of the house that runs underneath everything you've drawn.</div>
+  <!-- Moment 1 — the framing -->
+  <div class="tech-intro rv">
+    <div class="sx">03 — The Technology</div>
+    <h2 class="big" style="text-transform:none">You design the room. We make the light <span class="it">disappear into it.</span></h2>
+    <p class="tech-lead">The light you've imagined for this house is warm, quiet, and almost invisible — the kind that feels like it was always there. That's the hardest kind to engineer. It takes more control, not less, to make light this calm. This is the part of the house that runs underneath everything you've drawn.</p>
   </div>
-  <div class="tgrid2">
-    <div class="rv">
-      <div class="tbeat">
+  <!-- Moment 2 — beat 01 · the light -->
+  <div class="tech-beat rv">
         <div class="te">01 · The light</div>
         <h3>A light that dims like a candle.</h3>
         <p>A standard LED holds the same cold tone all the way down — flat and clinical at the bottom of the dial. The light we specify does the opposite: as it lowers, it warms. From a clean working white to the amber of a flame, the way daylight fades at dusk. On plaster, iroko and microcement, that warmth is everything — it lets your materials hold the light instead of bouncing it back.</p>
       </div>
-      <div class="tbeat">
-        <div class="te">02 · The system</div>
-        <h3>A house that keeps time with the sun.</h3>
-        <p>The light shifts through the day on its own — cool and awake in the morning, low and golden by night — tracking the sun by the home's own position. No wall of switches to read, nothing to program by hand, no cold blue glow at midnight. The house simply knows what the hour asks for. Artificial light that behaves like the window beside it.</p>
-      </div>
-    </div>
-    <div class="graphcard rv d1">
+  <!-- Moment 3 — the graph, isolated -->
+  <div class="tech-graph rv">
       <div class="gh">It dims like a candle, not a screen.</div>
       <svg viewBox="0 0 500 304" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Warm-dim color temperature curve: as light dims it warms from 3000K to 1800K, while a standard LED stays cold.">
         <line x1="70" y1="34" x2="70" y2="240" style="stroke:var(--tinta);stroke-width:1"/>
@@ -586,9 +577,14 @@
         <text x="70" y="298" style="font-family:var(--display);font-size:9px;letter-spacing:.04em;fill:var(--tinta-mute)">3000K · CLEAN WHITE</text>
         <text x="478" y="298" text-anchor="end" style="font-family:var(--display);font-size:9px;letter-spacing:.04em;fill:var(--tinta-mute)">1800K · CANDLELIGHT</text>
       </svg>
-    </div>
   </div>
-  <div class="foot-tech rv">Engineered on Lutron HomeWorks &amp; Ketra — the reference standard for light that moves with the day.</div>
+  <!-- Moment 4 — beat 02 · the system -->
+  <div class="tech-beat rv">
+    <div class="te">02 · The system</div>
+    <h3>A house that keeps time with the sun.</h3>
+    <p>The light shifts through the day on its own — cool and awake in the morning, low and golden by night — tracking the sun by the home's own position. No wall of switches to read, nothing to program by hand, no cold blue glow at midnight. The house simply knows what the hour asks for. Artificial light that behaves like the window beside it.</p>
+    <div class="foot-tech">Engineered on Lutron HomeWorks &amp; Ketra — the reference standard for light that moves with the day.</div>
+  </div>
 </section>
 
 <!-- 07 WE'VE DONE THIS BEFORE -->
@@ -596,7 +592,7 @@
   <div class="work-head">
     <div class="rv">
       <div class="sx" style="margin-bottom:18px">04 — The Company We Keep</div>
-      <h2 class="big">We've done<br>this <span class="it">before</span></h2>
+      <h2 class="big" style="text-transform:none">We've done<br>this <span class="it">before</span></h2>
     </div>
     <div class="side rv d1">We light homes for people the world recognizes and rarely gets to see inside. The discretion is the point — we speak this language fluently, and we keep it to ourselves. The stakes here are familiar to us, and so is working beside a studio that holds them to your standard.</div>
   </div>
@@ -620,7 +616,7 @@
   <div class="work-head">
     <div class="rv">
       <div class="sx" style="margin-bottom:18px">05 — Selected Work</div>
-      <h2 class="big">A portfolio,<br>by <span class="it">typology</span></h2>
+      <h2 class="big" style="text-transform:none">A portfolio,<br>by <span class="it">typology</span></h2>
     </div>
     <div class="side rv d1">The same studio that lights an art collector's home lights a tower, a beach house, a flagship. Click any project to open its story.</div>
   </div>
@@ -652,7 +648,7 @@
   <div class="work-head">
     <div class="rv">
       <div class="sx" style="margin-bottom:18px">06 — What we do</div>
-      <h2 class="big">Three stages,<br>one <span class="it">commitment.</span></h2>
+      <h2 class="big" style="text-transform:none">Three stages,<br>one <span class="it">commitment.</span></h2>
     </div>
     <div class="note rv d1">We design the light, we protect it through construction, and we stay until it's right — in coordination with Studio Valle de Valle.</div>
   </div>
@@ -668,7 +664,7 @@
   <div class="work-head">
     <div class="rv">
       <div class="sx" style="margin-bottom:18px">07 — What you receive</div>
-      <h2 class="big">Every drawing,<br>every <span class="it">stage.</span></h2>
+      <h2 class="big" style="text-transform:none">Every drawing,<br>every <span class="it">stage.</span></h2>
     </div>
     <div class="note rv d1">The concrete set you can hold us to — grouped by stage, delivered inside your process.</div>
   </div>
@@ -709,7 +705,7 @@
 <!-- 10 COORDINATION -->
 <section class="sec coord" id="coordination">
   <div class="sec-head rv"><div class="sx">08 — Coordination</div></div>
-  <h2 class="big rv d1">Built to work inside <span class="it">your process.</span></h2>
+  <h2 class="big rv d1" style="text-transform:none">Built to work inside <span class="it">your process.</span></h2>
   <div class="cograd rv d1">
     <div class="copt"><h3>File standards</h3><p>We deliver in your formats and work directly on your drawings.</p></div>
     <div class="copt"><h3>Consultant coordination</h3><p>We coordinate directly with architecture, interior design, AV and structural — so lighting never becomes the thing that holds up the room.</p></div>
@@ -723,7 +719,7 @@
   <div class="work-head">
     <div class="rv">
       <div class="sx" style="margin-bottom:18px">09 — The Renovated Areas</div>
-      <h2 class="big">Room by room,<br>a <span class="it">point of view</span></h2>
+      <h2 class="big" style="text-transform:none">Room by room,<br>a <span class="it">point of view</span></h2>
     </div>
     <div class="note rv d1">Per Studio Valle de Valle's drawings. Lighting scope covers the renovated areas only — but we don't read them as a list. Each room already has an intention.</div>
   </div>
@@ -744,20 +740,10 @@
   </div>
 </section>
 
-<!-- MARQUEE -->
-<section class="scale">
-  <div class="marq">
-    <span>Light as the soul of the architecture —</span>
-    <span>Light as the soul of the architecture —</span>
-    <span>Light as the soul of the architecture —</span>
-    <span>Light as the soul of the architecture —</span>
-  </div>
-</section>
-
 <!-- 11 THE STUDIO -->
 <section class="sec studio" id="studio">
   <div class="sec-head rv"><div class="sx">10 — The Studio</div></div>
-  <div class="lead rv d1">For 33 years, Karen Mannheim Lighting Studio has done one thing: make light give a space its <span class="it">meaning</span>.</div>
+  <div class="lead rv d1" style="text-transform:none">For 33 years, Karen Mannheim Lighting Studio has done one thing: make light give a space its <span class="it">meaning</span>.</div>
   <div class="grid">
     <div class="copy rv">
       <p>What began as one person knocking on doors in Lima is now a practice of more than 80 people across three continents, with offices in Lima, Miami and Madrid. For a Coral Gables home, our Miami studio is already next door — not flying in, but here.</p>
@@ -833,7 +819,7 @@
 <!-- CLOSE -->
 <section class="cta" id="contact">
   <div class="kicker rv">The Beginning of a Conversation</div>
-  <h2 class="rv d1">Every room he's ever been in had an audience.<br>This one <span class="it">won't.</span></h2>
+  <h2 class="rv d1" style="text-transform:none">Every room he's ever been in had an audience.<br>This one <span class="it">won't.</span></h2>
   <p class="line rv d2">This house is going to be singular — and the light inside it should be held to the same standard as everything else you're designing. We'd be honored to build that part alongside you. Let's start with a conversation: show us where the house is headed, and we'll show you how we'd light it.</p>
   <a href="https://www.kmlightingstudio.com" class="btn rv d2">Start the conversation +</a>
 </section>
@@ -953,13 +939,13 @@
     yacht:{cat:'Private Asset · Marine',title:'Superyacht',loc:'Confidential',photos:4,
       challenge:'Lighting at sea — vibration, salt, low ceilings, and the expectation of a five-star suite in every cabin.',
       solution:'Marine-rated, low-glare layers calibrated for movement, intimacy and long nights on the water.'},
-    jet:{cat:'Private Asset · Aviation',title:'Private Jet',loc:'Confidential',photos:4,
+    jet:{cat:'Private Asset · Aviation',title:'Private Jet',loc:'Confidential',photos:3,
       challenge:'A cabin that has to feel like a private lounge at 40,000 feet, within strict weight and certification limits.',
       solution:'Tuned, circadian-aware light that softens travel and makes the cabin feel like an extension of home.'},
     saadiyat:{cat:'Cultural · Venue',title:'Saadiyat Nights',loc:'Abu Dhabi',photos:5,video:'assets/saadiyat/video.mp4',
       challenge:'A 2,000-seat open-air venue hosting the biggest voices in the world — J.Lo, John Mayer, Andrea Bocelli, Lewis Capaldi, Sting, Mariah Carey.',
       solution:'A venue-wide lighting installation — not the stage — that turned the entire site into the experience, night after night.'},
-    collector:{cat:'Residential · Private Collection',title:'A Private Art Collector\'s Residence',loc:'Confidential',photos:6,
+    collector:{cat:'Residential · Private Collection',title:'A Private Art Collector\'s Residence',loc:'Confidential',photos:4,
       challenge:'A home built around a serious art collection, where the work has to lead and the architecture has to recede.',
       solution:'Gallery-grade, low-UV light and deliberate pools of shadow that let each piece hold the room — the way a collector actually wants to live with art.'},
     palmbeach:{cat:'Residential · Wecselman Design',title:'A Palm Beach Residence',loc:'Palm Beach',photos:5,
@@ -968,10 +954,10 @@
     pezet3:{cat:'Residential · RAMSA',title:'Pezet 3',loc:'Lima',photos:6,
       challenge:'The third tower in a decade-long collaboration with Robert A.M. Stern Architects — timeless, never trendy.',
       solution:'An architectural lighting language carried across all three towers; its reveal reached 80,000 views and brought a new penthouse client.'},
-    moraleja:{cat:'Residential · MORPH Studio',title:'La Moraleja Residence',loc:'Madrid',photos:5,
+    moraleja:{cat:'Residential · MORPH Studio',title:'La Moraleja Residence',loc:'Madrid',photos:2,
       challenge:'A contemporary residence with one of the world\'s top-100 architecture firms.',
       solution:'Restrained, architectural light that lets clean lines and the connection to the garden lead.'},
-    vivagym:{cat:'Commercial · Wellness',title:'Viva Gym Building',loc:'—',photos:4,
+    vivagym:{cat:'Commercial · Wellness',title:'Viva Gym Building',loc:'—',photos:2,
       challenge:'A wellness brand that lives or dies by how the space makes the body feel.',
       solution:'Energising by day, calming by night — light tuned to the body\'s own clock.'},
     blascerdena:{cat:'Multifamily · RAMSA',title:'Blas Cerdeña',loc:'Lima',photos:8,
