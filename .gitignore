@@ -7,3 +7,6 @@
 !/CLAUDE.md
 !/README.md
 !/ASSET-MANIFEST.md
+
+# OS junk (no aflojar el resto)
+**/.DS_Store
